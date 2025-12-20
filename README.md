@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Web - Dr. Omar Wahab
 
-## Getting Started
+Site vitrine responsive pour le Dr. Omar Wahab, chirurgien esthétique à Bruges.
 
-First, run the development server:
+## 🚀 Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **React 19**
+
+## 📁 Structure du projet
+
+```
+dr-omar-wahab/
+├── app/                    # Pages Next.js (App Router)
+│   ├── page.tsx           # Page d'accueil
+│   ├── layout.tsx         # Layout principal
+│   ├── a-propos/          # Page à propos
+│   ├── contact/           # Page contact
+│   ├── blog/              # Blog (liste + articles)
+│   ├── chirurgie/         # Pages de services
+│   │   ├── mammaire/
+│   │   ├── silhouette/
+│   │   └── visage/
+│   ├── medecine-esthetique/
+│   ├── mentions-legales/
+│   ├── sitemap.ts         # Sitemap XML
+│   └── robots.ts          # Robots.txt
+├── components/            # Composants React
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── Navigation.tsx
+│   └── DoctolibButton.tsx
+└── lib/                   # Utilitaires
+    ├── blog.ts           # Gestion du blog
+    ├── types.ts          # Types TypeScript
+    └── sanity.ts         # Configuration Sanity (optionnel)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Installer les dépendances
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Lancer le serveur de développement
+npm run dev
 
-## Learn More
+# Build de production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Lancer en production
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Copiez `.env.example` vers `.env.local`
+2. Configurez `NEXT_PUBLIC_SITE_URL` avec votre domaine
+3. (Optionnel) Configurez Sanity pour le CMS du blog
 
-## Deploy on Vercel
+## 🎨 Fonctionnalités
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ Page d'accueil avec présentation
+- ✅ 4 pages de services (Mammaire, Silhouette, Visage, Médecine esthétique)
+- ✅ Menu déroulant pour les services
+- ✅ Bouton Doctolib sur toutes les pages
+- ✅ Blog avec système de gestion d'articles
+- ✅ Pages classiques (À propos, Contact, Mentions légales)
+- ✅ SEO optimisé (metadata, sitemap, robots.txt)
+- ✅ Design responsive (mobile-first)
+- ✅ Performance optimisée
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Blog / CMS
+
+Le blog utilise actuellement des données statiques dans `lib/blog.ts`.
+
+Pour intégrer un CMS :
+- **Sanity** : Décommentez et configurez `lib/sanity.ts`
+- **Strapi** : Créez une configuration similaire
+- **Contentful** : Utilisez leur SDK
+
+## 🚀 Déploiement
+
+### Vercel (Recommandé)
+
+1. Connectez votre repo GitHub à Vercel
+2. Configurez les variables d'environnement
+3. Déployez automatiquement
+
+### Autres plateformes
+
+Le site peut être déployé sur n'importe quelle plateforme supportant Next.js :
+- Netlify
+- AWS Amplify
+- VPS avec Node.js
+
+## 🔗 Liens importants
+
+- **Doctolib** : [Lien de prise de rendez-vous](https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab/booking/motive-categories?specialityId=18&telehealth=false&placeId=practice-61570&bookingFunnelSource=profile)
+
+## 📞 Support
+
+Pour toute question ou modification, contactez le développeur.
