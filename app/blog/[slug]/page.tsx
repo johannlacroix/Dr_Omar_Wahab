@@ -3,6 +3,7 @@ import { getBlogPost, getAllBlogPosts } from '@/lib/blog';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import { DoctolibButton } from '@/components/DoctolibButton';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 interface BlogPostPageProps {
@@ -10,7 +11,7 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllBlogPosts();
+  const posts = await getAllBlogPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -20,7 +21,7 @@ export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getBlogPost(slug);
 
   if (!post) {
     return {
@@ -36,7 +37,7 @@ export async function generateMetadata({
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getBlogPost(slug);
 
   if (!post) {
     notFound();
@@ -69,6 +70,51 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <article>
+              {post.image && (
+                <div 
+                  className={`relative rounded-2xl overflow-hidden shadow-xl mb-12 ${
+                    // Taille
+                    post.imageSize === 'full'
+                      ? 'w-full'
+                      : post.imageSize === 'large'
+                      ? 'w-full md:w-4/5'
+                      : post.imageSize === 'medium'
+                      ? 'w-full md:w-3/5'
+                      : 'w-full md:w-2/5'
+                  } ${
+                    // Alignement
+                    post.imageSize === 'full'
+                      ? 'mx-auto'
+                      : post.imageAlignment === 'left'
+                      ? 'mr-auto'
+                      : post.imageAlignment === 'right'
+                      ? 'ml-auto'
+                      : 'mx-auto'
+                  } ${
+                    // Format d'aspect
+                    post.imageFormat === 'portrait' 
+                      ? 'aspect-[4/3]' 
+                      : post.imageFormat === 'square'
+                      ? 'aspect-square'
+                      : post.imageFormat === 'banner'
+                      ? 'aspect-[21/9]'
+                      : 'aspect-video'
+                  }`}
+                >
+                  <Image
+                    src={post.image}
+                    alt={post.imageAlt || post.title}
+                    fill
+                    className="object-cover"
+                    priority
+                    style={{
+                      objectPosition: post.imageHotspot 
+                        ? `${post.imageHotspot.x * 100}% ${post.imageHotspot.y * 100}%`
+                        : 'center',
+                    }}
+                  />
+                </div>
+              )}
               <div className="prose prose-lg max-w-none mb-12">
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
               </div>

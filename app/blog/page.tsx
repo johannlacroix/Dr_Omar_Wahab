@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: "Découvrez les articles du Dr. Omar Wahab sur la chirurgie esthétique, la médecine esthétique et les actualités du cabinet.",
 };
 
-export default function BlogPage() {
-  const posts = getAllBlogPosts();
+export default async function BlogPage() {
+  const posts = await getAllBlogPosts();
 
   return (
     <div className="min-h-screen">
