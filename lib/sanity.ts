@@ -1,6 +1,15 @@
 import { createClient } from '@sanity/client';
-import imageUrlBuilder from '@sanity/image-url';
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import { createImageUrlBuilder } from '@sanity/image-url';
+
+// Type pour les sources d'images Sanity
+type SanityImageSource = {
+  _type?: string;
+  asset?: {
+    _ref?: string;
+    _type?: string;
+  };
+  [key: string]: any;
+};
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'rg0stah3';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
@@ -19,7 +28,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Builder pour les URLs d'images Sanity
-const builder = imageUrlBuilder(sanityClient);
+const builder = createImageUrlBuilder(sanityClient);
 
 export function urlFor(source: SanityImageSource) {
   return builder.image(source);

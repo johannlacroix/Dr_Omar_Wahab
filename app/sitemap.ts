@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/lib/blog';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.dr-omar-wahab.fr';
 
-  const blogPosts = getAllBlogPosts().map((post) => ({
+  const posts = await getAllBlogPosts();
+  const blogPosts = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.publishedAt),
     changeFrequency: 'monthly' as const,
