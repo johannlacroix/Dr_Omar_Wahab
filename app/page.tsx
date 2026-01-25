@@ -32,7 +32,7 @@ export default function Home() {
       title: 'Médecine Esthétique',
       description: 'Injections de Botox, acide hyaluronique et traitements non invasifs pour un rajeunissement naturel.',
       href: '/medecine-esthetique',
-      image: '/Visage/pexels-shiny-diamond-3762408_opti_800px.webp',
+      image: '/Esthétique/pexels-farhadirani-34775253_opti_800px.webp',
     },
   ];
 

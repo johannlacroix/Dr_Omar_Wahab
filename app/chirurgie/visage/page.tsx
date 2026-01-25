@@ -37,7 +37,7 @@ export default function VisagePage() {
     {
       title: 'Otoplastie',
       description: 'Correction des oreilles décollées.',
-      image: '/Silouhette/pexels-jess-vide-9269433_opti_800px.webp',
+      image: '/Visage/pexels-vitalyagorbachev-13755908_opti_800px.webp',
       position: 'left' as const,
     },
   ];
@@ -47,7 +47,7 @@ export default function VisagePage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Visage/pexels-shiny-diamond-3373732_opti_800px.webp"
+            src="/Visage/pexels-gustavo-fring-3985310_opti_800px.webp"
             alt="Chirurgie du Visage"
             fill
             className="object-cover"

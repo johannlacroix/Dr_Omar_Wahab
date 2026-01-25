@@ -25,19 +25,20 @@ export default function SilhouettePage() {
     {
       title: 'Lifting des bras',
       description: 'Correction de la ptose cutanée des bras pour retrouver des bras fermes.',
-      image: '/Visage/pexels-apasaric-2464535_opti_800px.webp',
+      image: '/Silouhette/pexels-mikhail-nilov-8157145_opti_800px.webp',
       position: 'left' as const,
     },
     {
       title: 'Lifting des cuisses',
       description: 'Remodelage des cuisses pour améliorer la silhouette et la fermeté cutanée.',
-      image: '/Silouhette/pexels-chris-clark-1933184-7432779_opti_800px.webp',
+      image: '/Silouhette/pexels-jonaorle-12746161_opti_800px.webp',
       position: 'right' as const,
+      objectPosition: 'center 100%',
     },
     {
       title: 'Body lift',
       description: 'Remodelage complet du corps après perte de poids importante.',
-      image: '/Silouhette/pexels-marina-ryazantseva-78161760-10965109_opti_800px.webp',
+      image: '/Silouhette/pexels-diana-akhmedova-84744860-18980551_opti_1080px.webp',
       position: 'left' as const,
     },
   ];
@@ -47,7 +48,7 @@ export default function SilhouettePage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Cabinet/pexels-karola-g-5207029_opti_800px.webp"
+            src="/Silouhette/pexels-pixabay-206369_opti_800px.webp"
             alt="Chirurgie de la Silhouette"
             fill
             className="object-cover"
@@ -101,6 +102,7 @@ export default function SilhouettePage() {
                         alt={intervention.title}
                         fill
                         className="object-cover"
+                        style={intervention.objectPosition ? { objectPosition: intervention.objectPosition } : undefined}
                       />
                     </div>
                     <div>
@@ -126,6 +128,7 @@ export default function SilhouettePage() {
                         alt={intervention.title}
                         fill
                         className="object-cover"
+                        style={intervention.objectPosition ? { objectPosition: intervention.objectPosition } : undefined}
                       />
                     </div>
                   </>
