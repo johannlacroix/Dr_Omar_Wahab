@@ -124,9 +124,17 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
   try {
     const posts: SanityPost[] = await sanityClient.fetch(query);
+    console.log(`[Blog] Fetched ${posts.length} posts from Sanity`);
+    if (posts.length === 0) {
+      console.warn('[Blog] No posts found. Check if posts are published in Sanity.');
+    }
     return posts.map(convertSanityPostToBlogPost);
   } catch (error) {
-    console.error('Error fetching blog posts from Sanity:', error);
+    console.error('[Blog] Error fetching blog posts from Sanity:', error);
+    console.error('[Blog] Sanity config:', {
+      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'rg0stah3',
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+    });
     return [];
   }
 }
