@@ -20,7 +20,7 @@ export default function Home() {
       title: 'Chirurgie de la Silhouette',
       description: 'Lipoaspiration, abdominoplastie, lifting des bras et des cuisses pour sculpter votre silhouette.',
       href: '/chirurgie/silhouette',
-      image: '/Cabinet/pexels-karola-g-5207029_opti_800px.webp',
+      image: '/Silouhette/pexels-pixabay-206369_opti_800px.webp',
     },
     {
       title: 'Chirurgie du Visage',
