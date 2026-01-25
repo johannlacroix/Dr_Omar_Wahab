@@ -14,7 +14,7 @@ export default function Home() {
       title: 'Chirurgie Mammaire',
       description: 'Augmentation, réduction, lifting mammaire et corrections diverses pour retrouver une poitrine harmonieuse.',
       href: '/chirurgie/mammaire',
-      image: '/Visage/pexels-shiny-diamond-3373716_opti_800px.webp',
+      image: '/Mammaire/pexels-julianemonarifotografia-20143888_opti_800px.webp',
     },
     {
       title: 'Chirurgie de la Silhouette',
