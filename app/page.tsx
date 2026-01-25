@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section - Vertical, centré */}
-      <section className="relative min-h-screen flex items-center py-20">
+      <section className="relative min-h-[75vh] flex items-center py-20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/Silouhette/pexels-diana-akhmedova-84744860-18980551_opti_1080px.webp"
