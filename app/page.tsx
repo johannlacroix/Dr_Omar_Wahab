@@ -26,7 +26,7 @@ export default function Home() {
       title: 'Chirurgie du Visage',
       description: 'Rhinoplastie, blépharoplastie, lifting facial et lipofilling pour rajeunir et harmoniser.',
       href: '/chirurgie/visage',
-      image: '/Visage/pexels-shiny-diamond-3373732_opti_800px.webp',
+      image: '/Visage/pexels-shiny-diamond-3762408_opti_800px.webp',
     },
     {
       title: 'Médecine Esthétique',
