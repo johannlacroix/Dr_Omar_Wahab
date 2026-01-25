@@ -9,7 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function SilhouettePage() {
-  const interventions = [
+  const interventions: {
+    title: string;
+    description: string;
+    image: string;
+    position: 'left' | 'right';
+    objectPosition?: string;
+  }[] = [
     {
       title: 'Lipoaspiration',
       description: 'Élimination des amas graisseux localisés pour remodeler la silhouette.',
