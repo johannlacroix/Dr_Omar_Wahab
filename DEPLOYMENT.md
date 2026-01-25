@@ -147,3 +147,5 @@ Ajoutez le script dans `app/layout.tsx` si nécessaire.
 - [ ] Test du bouton Doctolib
 - [ ] Test responsive (mobile/tablette/desktop)
 
+
+

@@ -8,10 +8,10 @@ export function DoctolibButton() {
       href={DOCTOLIB_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-light text-sm tracking-wide rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 uppercase"
     >
       <svg
-        className="w-5 h-5 mr-2"
+        className="w-4 h-4 mr-2"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -19,12 +19,11 @@ export function DoctolibButton() {
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2}
+          strokeWidth={1.5}
           d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
         />
       </svg>
-      Prendre RDV
+          Je prends rendez-vous
     </Link>
   );
 }
-

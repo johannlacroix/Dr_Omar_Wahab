@@ -186,3 +186,5 @@ Vous pouvez aussi utiliser des fichiers Markdown dans un dossier `content/blog/`
 - Gestion d'images intégrée
 - Versioning et preview
 
+
+

@@ -20,3 +20,5 @@ export interface Service {
   category: 'mammaire' | 'silhouette' | 'visage' | 'medecine-esthetique';
 }
 
+
+

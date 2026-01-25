@@ -13,61 +13,72 @@ export default function BlogPage() {
   const posts = getAllBlogPosts();
 
   return (
-    <div className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6 text-center">
-            Blog
-          </h1>
-          <p className="text-xl text-gray-700 text-center mb-12">
-            Actualités, conseils et informations sur la chirurgie esthétique
-          </p>
+    <div className="min-h-screen">
+      <section className="bg-background-soft py-20 md:py-32">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-light text-neutral-800 mb-6 tracking-tight">
+              Blog
+            </h1>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl md:text-2xl text-neutral-600 font-light tracking-wide">
+              Actualités, conseils et informations sur la chirurgie esthétique
+            </p>
+          </div>
+        </div>
+      </section>
 
-          {posts.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-600 text-lg">
-                Aucun article pour le moment. Les articles seront publiés prochainement.
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-8">
-              {posts.map((post) => (
-                <article
-                  key={post.id}
-                  className="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-shadow"
-                >
-                  <div className="mb-4">
-                    {post.category && (
-                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full mb-2">
-                        {post.category}
-                      </span>
-                    )}
-                    <time className="text-gray-500 text-sm block">
-                      {format(new Date(post.publishedAt), "d MMMM yyyy", { locale: fr })}
-                    </time>
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            {posts.length === 0 ? (
+              <div className="text-center py-16">
+                <p className="text-neutral-600 text-lg font-light">
+                  Aucun article pour le moment. Les articles seront publiés prochainement.
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-12">
+                {posts.map((post) => (
+                  <article
+                    key={post.id}
+                    className="bg-white p-8 md:p-10 rounded-2xl border border-neutral-200 hover:border-primary transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <div className="mb-6">
+                      {post.category && (
+                        <span className="inline-block px-4 py-1.5 bg-background-soft text-neutral-600 text-xs font-light tracking-wide uppercase mb-3 border border-neutral-200 rounded-lg">
+                          {post.category}
+                        </span>
+                      )}
+                      <time className="text-neutral-500 text-sm font-light block">
+                        {format(new Date(post.publishedAt), "d MMMM yyyy", { locale: fr })}
+                      </time>
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-light text-neutral-800 mb-6 tracking-tight">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="hover:text-primary transition-colors"
+                      >
+                        {post.title}
+                      </Link>
+                    </h2>
+                    <p className="text-neutral-600 mb-6 text-lg font-light leading-relaxed">{post.excerpt}</p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="hover:text-blue-900 transition"
+                      className="inline-flex items-center text-primary font-light text-sm tracking-wide hover:translate-x-2 transition-transform"
                     >
-                      {post.title}
+                      Lire la suite
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                      </svg>
                     </Link>
-                  </h2>
-                  <p className="text-gray-700 mb-4 text-lg">{post.excerpt}</p>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-block text-blue-600 font-semibold hover:text-blue-800 transition"
-                  >
-                    Lire la suite →
-                  </Link>
-                </article>
-              ))}
-            </div>
-          )}
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
-

@@ -43,48 +43,57 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <article>
+    <div className="min-h-screen">
+      <section className="bg-background-soft py-20 md:py-28">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
             <div className="mb-6">
               {post.category && (
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full mb-4">
+                <span className="inline-block px-4 py-1.5 bg-background-soft text-neutral-600 text-xs font-light tracking-wide uppercase mb-4 border border-neutral-200 rounded-lg">
                   {post.category}
                 </span>
               )}
-              <time className="text-gray-500 text-sm">
+              <time className="text-neutral-500 text-sm font-light block mb-6">
                 Publié le {format(new Date(post.publishedAt), "d MMMM yyyy", { locale: fr })}
               </time>
             </div>
-
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-light text-neutral-800 mb-6 tracking-tight">
               {post.title}
             </h1>
-
-            <div className="prose prose-lg max-w-none mb-12">
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            </div>
-
-            <div className="border-t border-gray-200 pt-8 mt-12">
-              <p className="text-gray-600 mb-4">
-                <strong>Auteur:</strong> {post.author}
-              </p>
-            </div>
-          </article>
-
-          <div className="mt-12 bg-blue-50 p-8 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Consultation sur rendez-vous
-            </h2>
-            <p className="text-gray-700 mb-6">
-              Prenez rendez-vous pour discuter de votre projet esthétique
-            </p>
-            <DoctolibButton />
+            <div className="w-16 h-0.5 bg-primary rounded-full"></div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <article>
+              <div className="prose prose-lg max-w-none mb-12">
+                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              </div>
+
+              <div className="border-t border-neutral-200 pt-8 mt-12">
+                <p className="text-neutral-600 font-light">
+                  <span className="text-neutral-500">Auteur:</span> {post.author}
+                </p>
+              </div>
+            </article>
+
+            <div className="mt-16 bg-background-soft rounded-3xl p-10 md:p-12 text-center border border-neutral-200">
+              <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-6 tracking-tight">
+                Consultation sur rendez-vous
+              </h2>
+              <p className="text-neutral-600 mb-8 font-light leading-relaxed text-lg max-w-2xl mx-auto">
+                Prenez rendez-vous pour discuter de votre projet esthétique
+              </p>
+              <div className="flex justify-center">
+                <DoctolibButton />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-
