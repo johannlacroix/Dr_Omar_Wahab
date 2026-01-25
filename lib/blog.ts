@@ -13,9 +13,8 @@ interface SanityPost {
   publishedAt: string;
   mainImage?: {
     asset: {
-      _id: string;
-      url: string;
-      metadata?: any;
+      _ref: string;
+      _type: string;
     };
     alt?: string;
     hotspot?: {
@@ -52,21 +51,37 @@ function formatCategory(category?: string): string | undefined {
 
 // Générer l'URL d'image selon le format
 function getImageUrl(mainImage: any, format?: string): string | undefined {
-  if (!mainImage?.asset) return undefined;
+  if (!mainImage?.asset) {
+    console.log('[Blog] getImageUrl: No mainImage.asset found', { mainImage });
+    return undefined;
+  }
 
-  const builder = urlFor(mainImage);
-  
-  // Dimensions selon le format
-  switch (format) {
-    case 'portrait':
-      return builder.width(800).height(1067).fit('crop').url(); // 4:3
-    case 'square':
-      return builder.width(1200).height(1200).fit('crop').url(); // 1:1
-    case 'banner':
-      return builder.width(1920).height(823).fit('crop').url(); // 21:9
-    case 'landscape':
-    default:
-      return builder.width(1920).height(1080).fit('crop').url(); // 16:9
+  try {
+    const builder = urlFor(mainImage);
+    let imageUrl: string;
+    
+    // Dimensions selon le format
+    switch (format) {
+      case 'portrait':
+        imageUrl = builder.width(800).height(1067).fit('crop').url(); // 4:3
+        break;
+      case 'square':
+        imageUrl = builder.width(1200).height(1200).fit('crop').url(); // 1:1
+        break;
+      case 'banner':
+        imageUrl = builder.width(1920).height(823).fit('crop').url(); // 21:9
+        break;
+      case 'landscape':
+      default:
+        imageUrl = builder.width(1920).height(1080).fit('crop').url(); // 16:9
+        break;
+    }
+    
+    console.log('[Blog] Generated image URL:', imageUrl);
+    return imageUrl;
+  } catch (error) {
+    console.error('[Blog] Error generating image URL:', error);
+    return undefined;
   }
 }
 
@@ -106,16 +121,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     content,
     author,
     publishedAt,
-    mainImage{
-      asset->{
-        _id,
-        url,
-        metadata
-      },
-      alt,
-      hotspot,
-      crop
-    },
+    mainImage,
     imageFormat,
     imageSize,
     imageAlignment,
@@ -149,16 +155,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | undefined> {
     content,
     author,
     publishedAt,
-    mainImage{
-      asset->{
-        _id,
-        url,
-        metadata
-      },
-      alt,
-      hotspot,
-      crop
-    },
+    mainImage,
     imageFormat,
     imageSize,
     imageAlignment,
