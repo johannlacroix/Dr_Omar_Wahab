@@ -14,25 +14,25 @@ export default function Home() {
       title: 'Chirurgie Mammaire',
       description: 'Augmentation, réduction, lifting mammaire et corrections diverses pour retrouver une poitrine harmonieuse.',
       href: '/chirurgie/mammaire',
-      image: '/Visage/pexels-shiny-diamond-3373716_opti_800px.webp',
+      image: '/Mammaire/pexels-julianemonarifotografia-20143888_opti_800px.webp',
     },
     {
       title: 'Chirurgie de la Silhouette',
       description: 'Lipoaspiration, abdominoplastie, lifting des bras et des cuisses pour sculpter votre silhouette.',
       href: '/chirurgie/silhouette',
-      image: '/Cabinet/pexels-karola-g-5207029_opti_800px.webp',
+      image: '/Silouhette/pexels-pixabay-206369_opti_800px.webp',
     },
     {
       title: 'Chirurgie du Visage',
       description: 'Rhinoplastie, blépharoplastie, lifting facial et lipofilling pour rajeunir et harmoniser.',
       href: '/chirurgie/visage',
-      image: '/Visage/pexels-shiny-diamond-3373732_opti_800px.webp',
+      image: '/Visage/pexels-shiny-diamond-3762408_opti_800px.webp',
     },
     {
       title: 'Médecine Esthétique',
       description: 'Injections de Botox, acide hyaluronique et traitements non invasifs pour un rajeunissement naturel.',
       href: '/medecine-esthetique',
-      image: '/Visage/pexels-shiny-diamond-3762408_opti_800px.webp',
+      image: '/Esthétique/pexels-farhadirani-34775253_opti_800px.webp',
     },
   ];
 
@@ -69,10 +69,10 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section - Vertical, centré */}
-      <section className="relative min-h-screen flex items-center py-20">
+      <section className="relative min-h-[75vh] flex items-center py-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/Cabinet/pexels-ivan-s-4989167_opti_800px.webp"
+            src="/Silouhette/pexels-diana-akhmedova-84744860-18980551_opti_1080px.webp"
             alt="Dr. Omar Wahab"
             fill
             className="object-cover"

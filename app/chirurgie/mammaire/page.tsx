@@ -49,10 +49,11 @@ export default function MammairePage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Visage/pexels-shiny-diamond-3373716_opti_800px.webp"
+            src="/Mammaire/pexels-79380313-9112046_opti_800px.webp"
             alt="Chirurgie Mammaire"
             fill
             className="object-cover"
+            style={{ objectPosition: 'center 30%' }}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/60 to-neutral-900/80"></div>
