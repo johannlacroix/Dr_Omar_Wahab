@@ -16,11 +16,7 @@ export function AugmentationMammaireCard({ image }: AugmentationMammaireCardProp
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div
-          className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl cursor-pointer"
-          onMouseEnter={openModal}
-          onClick={openModal}
-        >
+        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
           <Image
             src={image}
             alt="Augmentation mammaire"
@@ -31,13 +27,21 @@ export function AugmentationMammaireCard({ image }: AugmentationMammaireCardProp
         </div>
         <div>
           <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
-          <h3
-            className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight cursor-pointer"
-            onMouseEnter={openModal}
-            onClick={openModal}
-          >
-            Augmentation mammaire
-          </h3>
+          <div className="flex items-center gap-3 mb-4">
+            <h3 className="text-xl md:text-2xl font-light text-neutral-800 tracking-tight">
+              Augmentation mammaire
+            </h3>
+            <button
+              type="button"
+              onClick={openModal}
+              className="inline-flex items-center justify-center text-primary/80 hover:text-primary transition-colors"
+              aria-label="En savoir plus sur l'augmentation mammaire"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
           <p className="text-neutral-600 font-light leading-relaxed text-sm">
             Augmentation du volume mammaire par prothèses ou lipofilling pour retrouver une poitrine
             harmonieuse.
@@ -46,15 +50,21 @@ export function AugmentationMammaireCard({ image }: AugmentationMammaireCardProp
       </div>
 
       {isOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center px-4"
-          onClick={closeModal}
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4" onClick={closeModal}>
           <div
             className="relative max-w-3xl w-full bg-white rounded-3xl shadow-xl shadow-neutral-900/15 p-6 md:p-8 max-h-[90vh] overflow-y-auto"
-            onMouseLeave={closeModal}
             onClick={(event) => event.stopPropagation()}
           >
+            <button
+              type="button"
+              className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 transition-colors"
+              onClick={closeModal}
+              aria-label="Fermer la fenêtre d'information sur l'augmentation mammaire"
+            >
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}>
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
             <h3 className="text-2xl md:text-3xl font-light text-neutral-800 mb-4 tracking-tight">
               Augmentation mammaire par lipofilling
             </h3>

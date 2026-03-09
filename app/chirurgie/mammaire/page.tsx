@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
 import { AugmentationMammaireCard } from '@/components/AugmentationMammaireCard';
+import { ReductionMammaireCard } from '@/components/ReductionMammaireCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie Mammaire - Dr. Omar Wahab | Augmentation, Réduction, Lifting",
@@ -94,6 +95,11 @@ export default function MammairePage() {
             {interventions.map((intervention, index) => (
               intervention.title === 'Augmentation mammaire' ? (
                 <AugmentationMammaireCard
+                  key={index}
+                  image={intervention.image}
+                />
+              ) : intervention.title === 'Réduction mammaire' ? (
+                <ReductionMammaireCard
                   key={index}
                   image={intervention.image}
                 />
