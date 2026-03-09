@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
+import { AugmentationMammaireCard } from '@/components/AugmentationMammaireCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie Mammaire - Dr. Omar Wahab | Augmentation, Réduction, Lifting",
@@ -90,6 +91,12 @@ export default function MammairePage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-16">
             {interventions.map((intervention, index) => (
+              intervention.title === 'Augmentation mammaire' ? (
+                <AugmentationMammaireCard
+                  key={index}
+                  image={intervention.image}
+                />
+              ) : (
               <div
                 key={index}
                 className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${
@@ -104,7 +111,6 @@ export default function MammairePage() {
                         alt={intervention.title}
                         fill
                         className="object-cover"
-                        style={intervention.title === 'Augmentation mammaire' ? { objectPosition: 'center 50%' } : undefined}
                       />
                     </div>
                     <div>
@@ -130,12 +136,12 @@ export default function MammairePage() {
                         alt={intervention.title}
                         fill
                         className="object-cover"
-                        style={intervention.title === 'Augmentation mammaire' ? { objectPosition: 'center 50%' } : undefined}
                       />
                     </div>
                   </>
                 )}
               </div>
+              )
             ))}
           </div>
         </div>
