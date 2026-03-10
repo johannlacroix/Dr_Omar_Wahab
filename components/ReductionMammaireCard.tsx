@@ -64,11 +64,11 @@ export function ReductionMammaireCard({ image }: ReductionMammaireCardProps) {
                 <path d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <h3 className="text-2xl md:text-3xl font-light text-neutral-800 mb-4 tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-light text-neutral-800 mb-5 tracking-tight">
               Réduction mammaire
             </h3>
 
-            <div className="space-y-4 text-sm md:text-base text-neutral-700 font-light leading-relaxed">
+            <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
               <p>
                 La réduction mammaire vise à diminuer un volume de poitrine jugé trop important, à l&apos;origine
                 de douleurs dorsales ou cervicales, de gêne à l&apos;habilitation ou à la pratique sportive, et
