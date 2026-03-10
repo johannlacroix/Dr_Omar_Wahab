@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
+import { BotoxCard } from '@/components/BotoxCard';
+import { HyaluroniqueCard } from '@/components/HyaluroniqueCard';
+import { AntiAgeCard } from '@/components/AntiAgeCard';
+import { MesotherapieCard } from '@/components/MesotherapieCard';
 
 export const metadata: Metadata = {
   title: "Médecine Esthétique - Dr. Omar Wahab | Botox, Acide Hyaluronique",
@@ -81,52 +85,56 @@ export default function MedecineEsthetiquePage() {
       <section className="py-16 md:py-24 bg-background-soft">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-16">
-            {traitements.map((traitement, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${
-                  traitement.position === 'right' ? 'bg-white' : ''
-                }`}
-              >
-                {traitement.position === 'left' ? (
-                  <>
-                    <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                      <Image
-                        src={traitement.image}
-                        alt={traitement.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
-                      <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                        {traitement.title}
-                      </h3>
-                      <p className="text-neutral-600 font-light leading-relaxed text-sm">{traitement.description}</p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="order-2 md:order-1">
-                      <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
-                      <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                        {traitement.title}
-                      </h3>
-                      <p className="text-neutral-600 font-light leading-relaxed text-sm">{traitement.description}</p>
-                    </div>
-                    <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
-                      <Image
-                        src={traitement.image}
-                        alt={traitement.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
+            {traitements.map((traitement, index) =>
+              traitement.title === 'Injection de Botox' ? (
+                <BotoxCard key={index} image={traitement.image} />
+              ) : traitement.title === 'Acide hyaluronique' ? (
+                <HyaluroniqueCard key={index} image={traitement.image} />
+              ) : traitement.title === 'Traitements anti-âge' ? (
+                <AntiAgeCard key={index} image={traitement.image} />
+              ) : traitement.title === 'Mésothérapie' ? (
+                <MesotherapieCard key={index} image={traitement.image} />
+              ) : (
+                <div
+                  key={index}
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${
+                    traitement.position === 'right' ? 'bg-white' : ''
+                  }`}
+                >
+                  {traitement.position === 'left' ? (
+                    <>
+                      <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+                        <Image src={traitement.image} alt={traitement.title} fill className="object-cover" />
+                      </div>
+                      <div>
+                        <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
+                        <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
+                          {traitement.title}
+                        </h3>
+                        <p className="text-neutral-600 font-light leading-relaxed text-sm">
+                          {traitement.description}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="order-2 md:order-1">
+                        <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
+                        <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
+                          {traitement.title}
+                        </h3>
+                        <p className="text-neutral-600 font-light leading-relaxed text-sm">
+                          {traitement.description}
+                        </p>
+                      </div>
+                      <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
+                        <Image src={traitement.image} alt={traitement.title} fill className="object-cover" />
+                      </div>
+                    </>
+                  )}
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
