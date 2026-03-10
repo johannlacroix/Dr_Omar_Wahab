@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
+import { RhinoplastieCard } from '@/components/RhinoplastieCard';
+import { BlepharoplastieCard } from '@/components/BlepharoplastieCard';
+import { LiftingFacialCard } from '@/components/LiftingFacialCard';
+import { LipofillingVisageCard } from '@/components/LipofillingVisageCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie du Visage - Dr. Omar Wahab | Rhinoplastie, Blépharoplastie, Lifting",
@@ -86,52 +90,52 @@ export default function VisagePage() {
       <section className="py-16 md:py-24 bg-background-soft">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-16">
-            {interventions.map((intervention, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${
-                  intervention.position === 'right' ? 'bg-white' : ''
-                }`}
-              >
-                {intervention.position === 'left' ? (
-                  <>
-                    <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                      <Image
-                        src={intervention.image}
-                        alt={intervention.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
-                      <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                        {intervention.title}
-                      </h3>
-                      <p className="text-neutral-600 font-light leading-relaxed text-sm">{intervention.description}</p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="order-2 md:order-1">
-                      <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
-                      <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                        {intervention.title}
-                      </h3>
-                      <p className="text-neutral-600 font-light leading-relaxed text-sm">{intervention.description}</p>
-                    </div>
-                    <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
-                      <Image
-                        src={intervention.image}
-                        alt={intervention.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
+            {interventions.map((intervention, index) =>
+              intervention.title === 'Rhinoplastie' ? (
+                <RhinoplastieCard key={index} image={intervention.image} />
+              ) : intervention.title === 'Blépharoplastie' ? (
+                <BlepharoplastieCard key={index} image={intervention.image} />
+              ) : intervention.title === 'Lifting facial' ? (
+                <LiftingFacialCard key={index} image={intervention.image} />
+              ) : intervention.title === 'Lipofilling du visage' ? (
+                <LipofillingVisageCard key={index} image={intervention.image} />
+              ) : (
+                <div
+                  key={index}
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${
+                    intervention.position === 'right' ? 'bg-white' : ''
+                  }`}
+                >
+                  {intervention.position === 'left' ? (
+                    <>
+                      <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+                        <Image src={intervention.image} alt={intervention.title} fill className="object-cover" />
+                      </div>
+                      <div>
+                        <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
+                        <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
+                          {intervention.title}
+                        </h3>
+                        <p className="text-neutral-600 font-light leading-relaxed text-sm">{intervention.description}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="order-2 md:order-1">
+                        <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
+                        <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
+                          {intervention.title}
+                        </h3>
+                        <p className="text-neutral-600 font-light leading-relaxed text-sm">{intervention.description}</p>
+                      </div>
+                      <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
+                        <Image src={intervention.image} alt={intervention.title} fill className="object-cover" />
+                      </div>
+                    </>
+                  )}
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
