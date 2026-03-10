@@ -5,6 +5,7 @@ import { RhinoplastieCard } from '@/components/RhinoplastieCard';
 import { BlepharoplastieCard } from '@/components/BlepharoplastieCard';
 import { LiftingFacialCard } from '@/components/LiftingFacialCard';
 import { LipofillingVisageCard } from '@/components/LipofillingVisageCard';
+import { OtoplastieCard } from '@/components/OtoplastieCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie du Visage - Dr. Omar Wahab | Rhinoplastie, Blépharoplastie, Lifting",
@@ -99,6 +100,8 @@ export default function VisagePage() {
                 <LiftingFacialCard key={index} image={intervention.image} />
               ) : intervention.title === 'Lipofilling du visage' ? (
                 <LipofillingVisageCard key={index} image={intervention.image} />
+              ) : intervention.title === 'Otoplastie' ? (
+                <OtoplastieCard key={index} image={intervention.image} />
               ) : (
                 <div
                   key={index}
