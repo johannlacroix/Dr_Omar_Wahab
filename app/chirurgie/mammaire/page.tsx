@@ -5,6 +5,7 @@ import { AugmentationMammaireCard } from '@/components/AugmentationMammaireCard'
 import { ReductionMammaireCard } from '@/components/ReductionMammaireCard';
 import { LiftingMammaireCard } from '@/components/LiftingMammaireCard';
 import { ReconstructionMammaireCard } from '@/components/ReconstructionMammaireCard';
+import { GynecomastieCard } from '@/components/GynecomastieCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie Mammaire - Dr. Omar Wahab | Augmentation, Réduction, Lifting",
@@ -107,6 +108,11 @@ export default function MammairePage() {
                 />
               ) : intervention.title === 'Lifting mammaire' ? (
                 <LiftingMammaireCard
+                  key={index}
+                  image={intervention.image}
+                />
+              ) : intervention.title === 'Correction de gynécomastie' ? (
+                <GynecomastieCard
                   key={index}
                   image={intervention.image}
                 />
