@@ -57,7 +57,7 @@ export default function ChirurgieIntimePage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <NymphoplastieCard image="/Esthétique/pexels-itslauravillela-35261735_opti_800px.webp" />
+            <NymphoplastieCard image="/Intime/pexels-jonaorle-12746161_opti_800px - Nympho.jpg" />
           </div>
         </div>
       </section>

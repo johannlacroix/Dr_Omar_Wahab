@@ -38,13 +38,13 @@ export default function Home() {
       title: 'Chirurgie Intime',
       description: 'Prise en charge discrète et personnalisée des gênes intimes féminines et masculines.',
       href: '/chirurgie/intime',
-      image: '/Esthétique/pexels-omarmedinaoficial-16131210_opti_800px.webp',
+      image: '/Intime/pexels-jonaorle-12746161_opti_800px - Nympho.jpg',
     },
     {
       title: 'Injections & Médecine Esthétique',
       description: 'Injections de Botox, acide hyaluronique et traitements anti‑âge pour un rajeunissement naturel et discret.',
       href: '/medecine-esthetique',
-      image: '/Esthétique/pexels-itslauravillela-35261735_opti_800px.webp',
+      image: '/Esthétique/pexels-farhadirani-34775253_opti_800px.webp',
     },
   ];
 
@@ -214,10 +214,11 @@ export default function Home() {
             <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
               <div className="relative h-96 md:h-[500px]">
                 <Image
-                  src="/Esthétique/pexels-cottonbro-7581581_opti_800px.webp"
-                  alt="Cabinet"
+                  src="/Silouhette/pexels-168783845-10958893_opti_800px.webp"
+                  alt="Excellence et confiance"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: 'center 20%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/40 to-transparent"></div>
               </div>

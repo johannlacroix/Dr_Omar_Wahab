@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
 import { ReferencesCard } from '@/components/ReferencesCard';
+import { CabinetCarousel } from '@/components/CabinetCarousel';
 
 export const metadata: Metadata = {
   title: "À propos - Dr. Omar Wahab | Chirurgien Esthétique",
@@ -21,10 +22,11 @@ export default function AboutPage() {
                   Dr. Omar Wahab
                 </h1>
                 <p className="text-neutral-600 text-sm font-light leading-relaxed" style={{ fontWeight: 300 }}>
-                  Diplômé en chirurgie plastique, reconstructrice et esthétique, le Dr Omar Wahab a été formé au CHRU de Lille,
-                  puis a exercé comme praticien hospitalier et chef d’unité de chirurgie plastique à l’hôpital de Roubaix avant
-                  de s’installer à Orthopole à Bruges en 2019. Il propose aujourd’hui une activité dédiée à la poitrine, au visage
-                  et à la silhouette à Bruges et à Bordeaux.
+                  Diplômé en chirurgie plastique, reconstructrice et esthétique et inscrit au Conseil National de
+                  l&apos;Ordre des Médecins, le Dr Omar Wahab a été formé au CHRU de Lille, puis a exercé comme praticien
+                  hospitalier et chef d’unité de chirurgie plastique à l’hôpital de Roubaix avant de s’installer à
+                  Orthopole à Bruges en 2019. Il propose aujourd’hui une activité dédiée à la poitrine, au visage et à
+                  la silhouette à Bruges et à Bordeaux.
                 </p>
               </div>
               <div className="relative w-full flex justify-center">
@@ -99,8 +101,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/Cabinet/Couloir_cabinet.png"
-                  alt="Couloir du cabinet"
+                  src="/Silouhette/wellness-beauty-concept-beautiful-slim-woman-white-underwear-sitting-white-floor_opti_800px.webp"
+                  alt="Formation et expertise"
                   fill
                   className="object-cover"
                 />
@@ -151,18 +153,20 @@ export default function AboutPage() {
                   Avant tout geste, le Dr Wahab accorde un temps important à l’écoute et à l’information afin
                   d’établir un climat de confiance mutuelle et de définir avec vous un projet réellement adapté à
                   votre situation. La consultation est un temps d’échange où la gêne exprimée est analysée dans sa
-                  globalité, sur les plans physique et psychique.
+                  globalité, sur les plans physique et psychique, et où une chirurgie peut parfois être déconseillée
+                  lorsque l’indication n’est pas justifiée.
                 </p>
                 <p className="text-neutral-600 font-light leading-relaxed text-sm mt-4">
                   Son approche est volontairement conservatrice et la moins invasive possible, avec pour objectif de
                   limiter les douleurs et l’inconfort postopératoire tout en recherchant des résultats naturels,
-                  efficaces et sûrs.
+                  efficaces et sûrs. Les bénéfices attendus et les complications potentielles, bien qu’exceptionnelles,
+                  sont discutés et leur probabilité adaptée à chaque situation.
                 </p>
               </div>
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
                 <Image
-                  src="/Cabinet/Emilie_Secrétaire (1).png"
-                  alt="Accueil par Émilie, secrétaire médicale"
+                  src="/Silouhette/wayhomestudio_sideways-shot-slim-woman-wears-cropped-top-panties-demonstrates-perfect-figure-after-weigh-loss-poses-against-beige-studio-wall_opti_800px.webp"
+                  alt="Mon approche en chirurgie esthétique"
                   fill
                   className="object-cover"
                 />
@@ -172,19 +176,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section Engagement Qualité - Photo à gauche */}
+      {/* Section Le cabinet et la clinique - Carousel à gauche */}
       <section className="py-16 md:py-24 bg-background-soft">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/Cabinet/Int_Cabinet.png"
-                  alt="Intérieur du cabinet"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <CabinetCarousel />
               <div>
                 <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
                   Le cabinet et la clinique

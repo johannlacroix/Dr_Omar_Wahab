@@ -22,6 +22,11 @@ const faqs = [
     answer:
       'La première consultation est dédiée à l’écoute de vos attentes et à l’examen clinique. Le Dr Omar Wahab vous explique les différentes options possibles, leurs bénéfices, leurs limites et leurs risques, afin de choisir avec vous la solution la plus adaptée à votre morphologie et à votre projet.',
   },
+  {
+    question: 'Comment se prend la décision opératoire et quel est le délai de réflexion ?',
+    answer:
+      'À l’issue de la consultation, un devis détaillé et une fiche d’information de la Société Française de Chirurgie Plastique vous sont remis pour l’intervention envisagée. Un délai légal de réflexion de 15 jours est respecté avant toute chirurgie programmée ; durant cette période, vous pouvez revoir le Dr Omar Wahab ou le contacter par mail ou via le formulaire du site pour poser toutes vos questions complémentaires.',
+  },
 ];
 
 export default function FaqPage() {

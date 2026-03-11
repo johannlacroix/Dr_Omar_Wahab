@@ -124,7 +124,9 @@ export default function ContactPage() {
                 </h2>
                 <p className="text-neutral-600 mb-6 font-light leading-relaxed text-sm">
                   Pour toute question ou demande d’information, vous pouvez également nous écrire via ce formulaire.
-                  Pour la prise de rendez-vous, merci de privilégier Doctolib.
+                  Pour la prise de rendez-vous, merci de privilégier Doctolib. Pendant votre délai de réflexion avant
+                  une éventuelle intervention, ce formulaire et l’e-mail du cabinet peuvent aussi être utilisés pour
+                  poser des questions complémentaires.
                 </p>
                 <form className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

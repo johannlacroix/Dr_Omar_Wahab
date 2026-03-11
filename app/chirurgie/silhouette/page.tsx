@@ -24,7 +24,7 @@ export default function SilhouettePage() {
     {
       title: 'Lipoaspiration',
       description: 'Élimination des amas graisseux localisés pour remodeler la silhouette.',
-      image: '/Silouhette/pexels-karola-g-6642975_opti_800px.webp',
+      image: '/Silouhette/pexels-kindelmedia-7298911_opti_800px.webp',
       position: 'left' as const,
     },
     {

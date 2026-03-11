@@ -17,8 +17,9 @@ export function ReferencesCard() {
           </h2>
           <p className="text-neutral-600 font-light text-sm leading-relaxed">
             Chirurgien plasticien qualifié en chirurgie esthétique, plastique et reconstructrice, le Dr Omar Wahab
-            exerce en secteur privé à Bruges et à Bordeaux, avec un suivi postopératoire de proximité et une pratique
-            fondée sur une solide formation hospitalo-universitaire.
+            est diplômé et inscrit au Conseil National de l&apos;Ordre des Médecins. Il exerce en secteur privé à
+            Bruges et à Bordeaux, avec un suivi postopératoire de proximité et une pratique fondée sur une solide
+            formation hospitalo-universitaire.
           </p>
         </div>
         <div className="mt-6 md:mt-0 md:ml-8">
@@ -93,6 +94,7 @@ export function ReferencesCard() {
                   <li>Ancien Chef de clinique, service de chirurgie plastique – CHRU de Lille</li>
                   <li>Ancien Assistant en Anatomie – CHRU de Lille</li>
                   <li>Membre de la SOFCEP (Société Française des Chirurgiens Esthétiques Plasticiens)</li>
+                  <li>Membre de l’ACEB (Association des Chirurgiens Esthétiques Bordelais)</li>
                 </ul>
               </div>
 
