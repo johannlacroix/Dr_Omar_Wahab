@@ -61,6 +61,21 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/temoignages" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
+                  Témoignages
+                </Link>
+              </li>
+              <li>
+                <Link href="/avant-apres" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
+                  Avant / Après
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
+                  Questions fréquentes
+                </Link>
+              </li>
+              <li>
                 <Link href="/mentions-legales" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
                   Mentions légales
                 </Link>
@@ -74,6 +89,32 @@ export function Footer() {
               Réservez votre consultation en ligne
             </p>
             <DoctolibButton />
+            <div className="mt-8">
+              <h4 className="font-light mb-4 text-white tracking-wide uppercase text-sm">Réseaux sociaux</h4>
+              <div className="flex space-x-4">
+                <Link
+                  href="https://www.instagram.com"
+                  className="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center text-neutral-400 hover:text-primary hover:bg-neutral-700 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <span className="text-xs font-light">IG</span>
+                </Link>
+                <Link
+                  href="https://www.facebook.com"
+                  className="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center text-neutral-400 hover:text-primary hover:bg-neutral-700 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <span className="text-xs font-light">Fb</span>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com"
+                  className="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center text-neutral-400 hover:text-primary hover:bg-neutral-700 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <span className="text-xs font-light">in</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 

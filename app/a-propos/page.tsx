@@ -21,7 +21,10 @@ export default function AboutPage() {
                   Dr. Omar Wahab
                 </h1>
                 <p className="text-neutral-600 text-sm font-light leading-relaxed" style={{ fontWeight: 300 }}>
-                  Diplômé en chirurgie plastique et esthétique à Lille en 2011, le Dr. Omar Wahab a exercé comme chef de service au Centre Hospitalier de Roubaix de 2012 à 2018, puis comme chef de clinique au CHU de Lille. Depuis 2019, il exerce en cabinet à Bruges et est membre de la Société Française des Chirurgiens Esthétiques Plasticiens (SOFCEP).
+                  Diplômé en chirurgie plastique, reconstructrice et esthétique, le Dr Omar Wahab a été formé au CHRU de Lille,
+                  puis a exercé comme praticien hospitalier et chef d’unité de chirurgie plastique à l’hôpital de Roubaix avant
+                  de s’installer à Orthopole à Bruges en 2019. Il propose aujourd’hui une activité dédiée à la poitrine, au visage
+                  et à la silhouette à Bruges et à Bordeaux.
                 </p>
               </div>
               <div className="relative w-full flex justify-center">
@@ -49,6 +52,45 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Section L'équipe */}
+      <section className="py-16 md:py-24 bg-background-soft">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-xl md:text-2xl font-light text-neutral-800 mb-6 tracking-tight">
+              L&apos;équipe autour du Dr Wahab
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-6 md:p-7">
+                <h3 className="text-lg md:text-xl font-light text-neutral-800 mb-2 tracking-tight">
+                  Anne-Sophie, aide opératoire
+                </h3>
+                <p className="text-neutral-600 font-light text-sm leading-relaxed">
+                  Collaboratrice expérimentée, elle assiste le Dr Wahab au bloc opératoire, veille aux mesures d’hygiène
+                  optimales et contribue à la sécurité de chaque geste.
+                </p>
+              </div>
+              <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-6 md:p-7">
+                <h3 className="text-lg md:text-xl font-light text-neutral-800 mb-2 tracking-tight">
+                  Émilie, secrétaire médicale
+                </h3>
+                <p className="text-neutral-600 font-light text-sm leading-relaxed">
+                  Véritable organisatrice du parcours de soins, elle vous accueille en consultation et facilite l’ensemble des
+                  démarches administratives et pratiques.
+                </p>
+              </div>
+              <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-6 md:p-7">
+                <h3 className="text-lg md:text-xl font-light text-neutral-800 mb-2 tracking-tight">
+                  Dr Astrid Ballanger, associée
+                </h3>
+                <p className="text-neutral-600 font-light text-sm leading-relaxed">
+                  Associée du Dr Wahab à Orthopole, elle intervient en complémentarité sur certains dossiers complexes afin
+                  d’offrir une prise en charge concertée et bienveillante.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Section Formation et Expertise - Photo à gauche */}
       <section className="py-16 md:py-24 bg-background-soft">
@@ -104,12 +146,18 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="order-2 md:order-1">
                 <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                  Approche Personnalisée
+                  Mon approche
                 </h3>
                 <p className="text-neutral-600 font-light leading-relaxed text-sm">
-                  Chaque patient est unique. Le Dr. Wahab privilégie une approche 
-                  personnalisée, prenant le temps d'écouter vos attentes et de vous 
-                  proposer les solutions les plus adaptées à votre situation.
+                  Avant tout geste, le Dr Wahab accorde un temps important à l’écoute et à l’information afin
+                  d’établir un climat de confiance mutuelle et de définir avec vous un projet réellement adapté à
+                  votre situation. La consultation est un temps d’échange où la gêne exprimée est analysée dans sa
+                  globalité, sur les plans physique et psychique.
+                </p>
+                <p className="text-neutral-600 font-light leading-relaxed text-sm mt-4">
+                  Son approche est volontairement conservatrice et la moins invasive possible, avec pour objectif de
+                  limiter les douleurs et l’inconfort postopératoire tout en recherchant des résultats naturels,
+                  efficaces et sûrs.
                 </p>
               </div>
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
@@ -140,13 +188,17 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                  Engagement Qualité
+                  Le cabinet et la clinique
                 </h3>
                 <p className="text-neutral-600 font-light leading-relaxed text-sm">
-                  Le Dr. Wahab s'engage à utiliser les techniques les plus modernes 
-                  et les plus sûres, dans le respect des normes de sécurité les plus 
-                  strictes. Votre bien-être et votre satisfaction sont au cœur de 
-                  sa pratique.
+                  Les consultations ont lieu à Orthopole, à Bruges, au sein d’une structure médicale dédiée à la
+                  chirurgie plastique, disposant d’un bloc de petite chirurgie pour les gestes sous anesthésie locale
+                  et d’une équipe formée au suivi des cicatrices et au matériel postopératoire sur mesure.
+                </p>
+                <p className="text-neutral-600 font-light leading-relaxed text-sm mt-4">
+                  Les interventions de chirurgie esthétique non conventionnées sont réalisées à la clinique Jean
+                  Villar, établissement certifié par la Haute Autorité de Santé, doté d’un plateau technique complet
+                  et d’un service d’anesthésie spécialisé.
                 </p>
               </div>
             </div>

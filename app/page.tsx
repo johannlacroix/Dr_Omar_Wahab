@@ -29,10 +29,22 @@ export default function Home() {
       image: '/Visage/pexels-shiny-diamond-3762408_opti_800px.webp',
     },
     {
-      title: 'Médecine Esthétique',
-      description: 'Injections de Botox, acide hyaluronique et traitements non invasifs pour un rajeunissement naturel.',
-      href: '/medecine-esthetique',
+      title: 'Chirurgie Dermatologique',
+      description: 'Traitement des lésions cutanées, nævus et tumeurs bénignes avec une attention particulière portée aux cicatrices.',
+      href: '/chirurgie/dermatologique',
       image: '/Esthétique/pexels-farhadirani-34775253_opti_800px.webp',
+    },
+    {
+      title: 'Chirurgie Intime',
+      description: 'Prise en charge discrète et personnalisée des gênes intimes féminines et masculines.',
+      href: '/chirurgie/intime',
+      image: '/Esthétique/pexels-omarmedinaoficial-16131210_opti_800px.webp',
+    },
+    {
+      title: 'Injections & Médecine Esthétique',
+      description: 'Injections de Botox, acide hyaluronique et traitements anti‑âge pour un rajeunissement naturel et discret.',
+      href: '/medecine-esthetique',
+      image: '/Esthétique/pexels-itslauravillela-35261735_opti_800px.webp',
     },
   ];
 

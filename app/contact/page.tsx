@@ -34,6 +34,7 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-12">
+            {/* Coordonnées et adresses */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
@@ -46,21 +47,35 @@ export default function ContactPage() {
               </div>
               <div className="p-8 md:p-12">
                 <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-8 tracking-tight">
-                  Informations de contact
+                  Coordonnées et adresses
                 </h2>
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">Cabinet</h3>
+                    <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
+                      Cabinet principal
+                    </h3>
                     <p className="text-neutral-600 font-light leading-relaxed text-lg">
-                      Dr. Omar Wahab<br />
-                      Chirurgien Esthétique<br />
-                      Bruges
+                      Dr Omar Wahab<br />
+                      Chirurgien esthétique<br />
+                      53 bis avenue Maryse Bastié<br />
+                      33520 Bruges, Bordeaux
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
+                      Consultations à Bordeaux
+                    </h3>
+                    <p className="text-neutral-600 font-light leading-relaxed text-lg">
+                      Établissement CLEO<br />
+                      12 rue Falquet<br />
+                      33000 Bordeaux
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Horaires et prise de rendez-vous */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
@@ -73,25 +88,116 @@ export default function ContactPage() {
               </div>
               <div className="p-8 md:p-12">
                 <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-8 tracking-tight">
-                  Horaires de consultation
+                  Horaires et prise de rendez-vous
                 </h2>
                 <div className="bg-background-soft rounded-xl p-6 mb-8">
                   <p className="text-neutral-600 mb-4 font-light leading-relaxed text-lg">
-                    Les consultations se font sur rendez-vous uniquement.
+                    Les consultations se font sur rendez-vous uniquement, principalement à Orthopole à Bruges.
                   </p>
-                  <p className="text-neutral-600 font-light leading-relaxed text-lg">
-                    Veuillez réserver votre créneau via la plateforme Doctolib 
-                    pour garantir votre disponibilité.
-                  </p>
+                  <div className="text-neutral-600 font-light leading-relaxed text-sm space-y-1.5">
+                    <p className="font-semibold text-neutral-700">Horaires indicatifs à Orthopole :</p>
+                    <p>Lundi : 14h00 – 17h00</p>
+                    <p>Jeudi : 9h00 – 20h00</p>
+                    <p>Vendredi : 9h00 – 17h00</p>
+                    <p>Samedi (une semaine sur deux) : 9h00 – 12h00</p>
+                  </div>
                 </div>
                 <div>
-                  <h3 className="font-light text-neutral-500 mb-4 tracking-wide uppercase text-sm">Prise de rendez-vous</h3>
+                  <h3 className="font-light text-neutral-500 mb-4 tracking-wide uppercase text-sm">
+                    Prendre rendez-vous en ligne
+                  </h3>
                   <p className="text-neutral-600 mb-6 font-light leading-relaxed text-lg">
-                    Pour prendre rendez-vous, utilisez notre plateforme de réservation en ligne.
+                    Pour réserver une consultation, utilisez la plateforme de réservation en ligne Doctolib.
                   </p>
                   <div className="flex justify-center md:justify-start">
                     <DoctolibButton />
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Formulaire de contact et carte */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-8 md:p-10">
+                <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-6 tracking-tight">
+                  Formulaire de contact
+                </h2>
+                <p className="text-neutral-600 mb-6 font-light leading-relaxed text-sm">
+                  Pour toute question ou demande d’information, vous pouvez également nous écrire via ce formulaire.
+                  Pour la prise de rendez-vous, merci de privilégier Doctolib.
+                </p>
+                <form className="space-y-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-light text-neutral-700 mb-1.5">Nom</label>
+                      <input
+                        type="text"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-light text-neutral-700 mb-1.5">Prénom</label>
+                      <input
+                        type="text"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-light text-neutral-700 mb-1.5">E-mail</label>
+                      <input
+                        type="email"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-light text-neutral-700 mb-1.5">Téléphone</label>
+                      <input
+                        type="tel"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-light text-neutral-700 mb-1.5">
+                      Type d&apos;intervention (indicatif)
+                    </label>
+                    <select className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white">
+                      <option>Chirurgie mammaire</option>
+                      <option>Chirurgie de la silhouette</option>
+                      <option>Chirurgie du visage</option>
+                      <option>Chirurgie dermatologique</option>
+                      <option>Chirurgie intime</option>
+                      <option>Médecine esthétique / injections</option>
+                      <option>Autre / à préciser</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-light text-neutral-700 mb-1.5">Votre message</label>
+                    <textarea
+                      rows={4}
+                      className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="inline-flex items-center justify-center rounded-full border border-primary px-6 py-2.5 text-sm font-light text-primary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Envoyer le message
+                  </button>
+                </form>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-8 md:p-10 flex flex-col">
+                <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-6 tracking-tight">
+                  Localisation du cabinet
+                </h2>
+                <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">
+                  Une carte interactive Google Maps pourra être intégrée ici pour faciliter votre venue au cabinet.
+                </p>
+                <div className="flex-1 rounded-2xl border border-dashed border-neutral-300 bg-background-soft flex items-center justify-center text-neutral-500 text-sm font-light px-4 text-center">
+                  Zone réservée à l’intégration de la carte (Google Maps).
                 </div>
               </div>
             </div>
