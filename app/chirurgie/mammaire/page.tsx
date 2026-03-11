@@ -6,6 +6,7 @@ import { ReductionMammaireCard } from '@/components/ReductionMammaireCard';
 import { LiftingMammaireCard } from '@/components/LiftingMammaireCard';
 import { ReconstructionMammaireCard } from '@/components/ReconstructionMammaireCard';
 import { GynecomastieCard } from '@/components/GynecomastieCard';
+import { MamelonsInvaginesCard } from '@/components/MamelonsInvaginesCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie Mammaire - Dr. Omar Wahab | Augmentation, Réduction, Lifting",
@@ -44,6 +45,13 @@ export default function MammairePage() {
       description: 'Reconstruction après mastectomie ou malformation congénitale.',
       image: '/Mammaire/pexels-vtnt2-21045058_opti_800px.webp',
       position: 'left' as const,
+    },
+    {
+      title: 'Mamelons invaginés',
+      description: 'Correction des mamelons rentrés ou ombiliqués pour restaurer une projection naturelle.',
+      image:
+        '/Mammaire/freepik_gpointstudio_breast-screening-is-very-important-every-woman_opti_800px.webp',
+      position: 'right' as const,
     },
   ];
 
@@ -118,6 +126,11 @@ export default function MammairePage() {
                 />
               ) : intervention.title === 'Reconstruction mammaire' ? (
                 <ReconstructionMammaireCard
+                  key={index}
+                  image={intervention.image}
+                />
+              ) : intervention.title === 'Mamelons invaginés' ? (
+                <MamelonsInvaginesCard
                   key={index}
                   image={intervention.image}
                 />

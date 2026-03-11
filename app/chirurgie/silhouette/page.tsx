@@ -42,7 +42,7 @@ export default function SilhouettePage() {
     {
       title: 'Lifting des cuisses',
       description: 'Remodelage des cuisses pour améliorer la silhouette et la fermeté cutanée.',
-      image: '/Silouhette/pexels-jonaorle-12746161_opti_800px.webp',
+      image: '/Silouhette/pexels-rocketmann-prod-9486624_opti_800px.webp',
       position: 'right' as const,
       objectPosition: 'center 100%',
     },

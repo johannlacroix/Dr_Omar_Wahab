@@ -99,11 +99,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/Silouhette/pexels-toni-8294697_opti_800px.webp"
-                  alt="Dr. Omar Wahab"
+                  src="/Cabinet/Couloir_cabinet.png"
+                  alt="Couloir du cabinet"
                   fill
                   className="object-cover"
-                  style={{ objectPosition: 'center 10%' }}
                 />
               </div>
               <div>
@@ -162,8 +161,8 @@ export default function AboutPage() {
               </div>
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
                 <Image
-                  src="/Cabinet/pexels-karola-g-5207029_opti_800px.webp"
-                  alt="Approche personnalisée"
+                  src="/Cabinet/Emilie_Secrétaire (1).png"
+                  alt="Accueil par Émilie, secrétaire médicale"
                   fill
                   className="object-cover"
                 />
@@ -180,8 +179,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/Cabinet/pexels-mart-production-7088483_opti_800px.webp"
-                  alt="Engagement qualité"
+                  src="/Cabinet/Int_Cabinet.png"
+                  alt="Intérieur du cabinet"
                   fill
                   className="object-cover"
                 />
