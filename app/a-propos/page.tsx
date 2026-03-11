@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
+import { ReferencesCard } from '@/components/ReferencesCard';
 
 export const metadata: Metadata = {
   title: "À propos - Dr. Omar Wahab | Chirurgien Esthétique",
@@ -35,6 +36,15 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Parcours & Références */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <ReferencesCard />
           </div>
         </div>
       </section>

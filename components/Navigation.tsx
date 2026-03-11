@@ -15,6 +15,8 @@ export function Navigation({ mobile = false, onClose }: NavigationProps) {
     { name: 'Chirurgie Mammaire', href: '/chirurgie/mammaire' },
     { name: 'Chirurgie de la Silhouette', href: '/chirurgie/silhouette' },
     { name: 'Chirurgie du Visage', href: '/chirurgie/visage' },
+    { name: 'Chirurgie dermatologique', href: '/chirurgie/dermatologique' },
+    { name: 'Chirurgie intime', href: '/chirurgie/intime' },
     { name: 'Médecine Esthétique', href: '/medecine-esthetique' },
   ];
 
