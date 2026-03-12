@@ -38,7 +38,7 @@ export default function Home() {
       title: 'Chirurgie Intime',
       description: 'Prise en charge discrète et personnalisée des gênes intimes féminines et masculines.',
       href: '/chirurgie/intime',
-      image: '/Intime/pexels-jonaorle-12746161_opti_800px - Nympho.jpg',
+      image: '/Intime/pexels-jonaorle-12746161_opti_800px - Nympho_opti_800px.webp',
     },
     {
       title: 'Injections & Médecine Esthétique',

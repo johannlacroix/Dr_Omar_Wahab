@@ -33,7 +33,7 @@ export default function ChirurgieIntimePage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Intime/pexels-pixabay-414362.jpg"
+            src="/Intime/pexels-pixabay-414362_opti_800px.webp"
             alt="Chirurgie intime"
             fill
             className="object-cover"
@@ -57,7 +57,7 @@ export default function ChirurgieIntimePage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <NymphoplastieCard image="/Intime/pexels-jonaorle-12746161_opti_800px - Nympho.jpg" />
+            <NymphoplastieCard image="/Intime/pexels-jonaorle-12746161_opti_800px - Nympho_opti_800px.webp" />
           </div>
         </div>
       </section>
