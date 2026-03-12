@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-const DOCTOLIB_URL = 'https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab/booking/motive-categories?specialityId=18&telehealth=false&placeId=practice-61570&bookingFunnelSource=profile';
+const DOCTOLIB_URL =
+  'https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570';
 
 export function DoctolibButton() {
   return (

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 export function ReferencesCard() {
@@ -76,14 +77,24 @@ export function ReferencesCard() {
             <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
               <div>
                 <h4 className="text-base md:text-lg font-normal text-neutral-800 mb-2">Activité actuelle</h4>
-                <p>
-                  Le Dr Omar Wahab exerce son activité de chirurgie esthétique, plastique et reconstructrice en secteur
-                  privé à Bruges, près de Bordeaux. Il reçoit ses patient·e·s dans son cabinet situé à Bruges, à
-                  proximité de la clinique Jean Villar où sont réalisées les interventions chirurgicales, et consulte
-                  également depuis 2026 au sein de l’établissement CLEO, 12 rue Falquet à Bordeaux. Ce mode
-                  d’organisation lui permet d’assurer un suivi postopératoire de qualité, grâce à une grande
-                  disponibilité.
-                </p>
+                <div className="space-y-2">
+                  <p>
+                    Le Dr Omar Wahab exerce son activité de chirurgie esthétique, plastique et reconstructrice en
+                    secteur privé à Bruges, près de Bordeaux. Il reçoit ses patient·e·s dans son cabinet situé à
+                    Bruges, à proximité de la clinique Jean Villar où sont réalisées les interventions chirurgicales,
+                    et consulte également depuis 2026 au sein de l’établissement CLEO, 12 rue Falquet à Bordeaux. Ce
+                    mode d’organisation lui permet d’assurer un suivi postopératoire de qualité, grâce à une grande
+                    disponibilité.
+                  </p>
+                  <Link
+                    href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary text-xs md:text-sm font-light hover:underline"
+                  >
+                    Je prends rendez-vous à CLEO
+                  </Link>
+                </div>
               </div>
 
               <div>

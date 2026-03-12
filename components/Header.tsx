@@ -58,7 +58,7 @@ export function Header() {
               href="/a-propos" 
               className="text-neutral-600 hover:text-primary transition-colors font-light text-sm tracking-wide relative group"
             >
-              À propos
+              Dr Wahab
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full"></span>
             </Link>
             <Link 

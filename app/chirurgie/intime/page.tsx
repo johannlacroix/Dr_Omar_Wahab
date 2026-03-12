@@ -33,7 +33,7 @@ export default function ChirurgieIntimePage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Esthétique/pexels-omarmedinaoficial-16131210_opti_800px.webp"
+            src="/Intime/pexels-pixabay-414362.jpg"
             alt="Chirurgie intime"
             fill
             className="object-cover"

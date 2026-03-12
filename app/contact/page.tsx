@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
 
@@ -13,7 +14,7 @@ export default function ContactPage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Cabinet/pexels-mart-production-7088483_opti_800px.webp"
+            src="/Cabinet/Plaque_signal.png"
             alt="Contact"
             fill
             className="object-cover"
@@ -38,8 +39,8 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Silouhette/pexels-toni-8294697_opti_800px.webp"
-                  alt="Cabinet"
+                  src="/Cabinet/Orthopole.webp"
+                  alt="Orthopole - cabinet du Dr Wahab"
                   fill
                   className="object-cover"
                 />
@@ -52,24 +53,41 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
-                      Cabinet principal
+                      Orthopôle à Bruges
                     </h3>
                     <p className="text-neutral-600 font-light leading-relaxed text-lg">
-                      Dr Omar Wahab<br />
-                      Chirurgien esthétique<br />
-                      53 bis avenue Maryse Bastié<br />
-                      33520 Bruges, Bordeaux
+53 bis avenue Maryse Bastié<br />
+                      33520 Bruges
                     </p>
+                    <div className="mt-4">
+                      <Link
+                        href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
+                      >
+                        Je prends rendez-vous à Orthopôle
+                      </Link>
+                    </div>
                   </div>
                   <div>
                     <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
-                      Consultations à Bordeaux
+                      Clinique CLEO à Bordeaux
                     </h3>
                     <p className="text-neutral-600 font-light leading-relaxed text-lg">
-                      Établissement CLEO<br />
                       12 rue Falquet<br />
                       33000 Bordeaux
                     </p>
+                    <div className="mt-4">
+                      <Link
+                        href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
+                      >
+                        Je prends rendez-vous à CLEO
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -79,10 +97,11 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Cabinet/pexels-ivan-s-4989167_opti_800px.webp"
-                  alt="Horaires"
+                  src="/Cabinet/Emilie_Secrétaire (1).png"
+                  alt="Horaires et accueil du cabinet"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: 'center 35%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-neutral-900/20 to-transparent"></div>
               </div>

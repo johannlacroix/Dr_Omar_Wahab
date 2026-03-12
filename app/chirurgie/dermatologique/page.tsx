@@ -16,7 +16,7 @@ export default function ChirurgieDermatologiquePage() {
         'Retrait localisé de grains de beauté, kystes ou autres lésions bénignes gênantes ou inesthétiques, avec analyse anatomopathologique si nécessaire.',
     },
     {
-      title: 'Chirurgie des tumeurs cutanées',
+      title: 'Chirurgie des tumeurs cutanées bénignes et malignes',
       description:
         'Prise en charge chirurgicale de certaines tumeurs de la peau, avec marges de sécurité adaptées et reconstruction locale soignée.',
     },
@@ -32,7 +32,7 @@ export default function ChirurgieDermatologiquePage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Esthétique/pexels-farhadirani-34775253_opti_800px.webp"
+            src="/Dermato/freepik_young-woman-getting-beauty-procedure-wellness-center_opti_800px.webp"
             alt="Chirurgie dermatologique"
             fill
             className="object-cover"
