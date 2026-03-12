@@ -32,7 +32,7 @@ export default function Home() {
       title: 'Chirurgie Dermatologique',
       description: 'Traitement des lésions cutanées, nævus et tumeurs bénignes avec une attention particulière portée aux cicatrices.',
       href: '/chirurgie/dermatologique',
-      image: '/Esthétique/pexels-farhadirani-34775253_opti_800px.webp',
+      image: '/Dermato/freepik_young-woman-getting-beauty-procedure-wellness-center_opti_800px.webp',
     },
     {
       title: 'Chirurgie Intime',
@@ -176,7 +176,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-neutral-800 mb-4 tracking-tight">
-                Pourquoi choisir le Dr. Omar Wahab ?
+                Principes fondamentaux de notre pratique
               </h2>
               <div className="w-16 h-0.5 bg-primary mx-auto mb-6 rounded-full"></div>
             </div>
@@ -237,6 +237,30 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Avis patients */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-light text-neutral-800 mb-4 tracking-tight">
+              Avis des patients
+            </h2>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-6 rounded-full"></div>
+            <p className="text-neutral-600 font-light text-lg mb-8 leading-relaxed">
+              Les avis Google du cabinet permettent de découvrir l’expérience des patient·e·s suivis par le Dr Omar
+              Wahab. Ils complèteront prochainement cette section.
+            </p>
+            <a
+              href="https://www.google.com/search?sca_esv=b0109be66d9778c1&sxsrf=ANbL-n59Xg4zgZilsGzyVifWpmSrX2oANQ:1773322246305&q=dr+wahab&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcaH2UvvokEDX8PBwgZjzbqOK5GrBde-oCbpiEbJOFjAx7TB_CFpC1JQta0OhcrPdL6kpcY%3D&uds=ALYpb_kiiUNHkONghgvqB_3sKPHuGxhmG5VPqDGcgAdxlg5rMgxHFTXsahyHeDWuC9wElkm1wnfD06AW4SxD1isrFUHAoX9yCCPSLWztAbkKUXyDllStsnc&sa=X&ved=2ahUKEwixt8CUvJqTAxUIdqQEHeriGzcQ3PALegQIFxAE&biw=1970&bih=897&dpr=0.97"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-primary px-6 py-2.5 text-sm font-light text-primary hover:bg-primary hover:text-white transition-colors"
+            >
+              Consulter les avis Google
+            </a>
           </div>
         </div>
       </section>

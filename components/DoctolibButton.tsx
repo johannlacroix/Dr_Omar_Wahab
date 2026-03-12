@@ -9,7 +9,7 @@ export function DoctolibButton() {
       href={DOCTOLIB_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-light text-sm tracking-wide rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 uppercase"
+      className="inline-flex items-center justify-center px-4 md:px-6 py-2.5 md:py-3 bg-primary text-white font-light text-xs md:text-sm tracking-wide rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 uppercase whitespace-nowrap"
     >
       <svg
         className="w-4 h-4 mr-2"

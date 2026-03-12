@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { DoctolibButton } from '@/components/DoctolibButton';
+import { MapTabs } from '@/components/MapTabs';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -135,7 +136,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Formulaire de contact et carte */}
+            {/* Formulaire de contact et cartes */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-8 md:p-10">
                 <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-6 tracking-tight">
@@ -210,17 +211,7 @@ export default function ContactPage() {
                 </form>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 p-8 md:p-10 flex flex-col">
-                <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-6 tracking-tight">
-                  Localisation du cabinet
-                </h2>
-                <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">
-                  Une carte interactive Google Maps pourra être intégrée ici pour faciliter votre venue au cabinet.
-                </p>
-                <div className="flex-1 rounded-2xl border border-dashed border-neutral-300 bg-background-soft flex items-center justify-center text-neutral-500 text-sm font-light px-4 text-center">
-                  Zone réservée à l’intégration de la carte (Google Maps).
-                </div>
-              </div>
+              <MapTabs />
             </div>
           </div>
         </div>
