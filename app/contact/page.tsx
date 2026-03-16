@@ -40,10 +40,11 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Cabinet/Orthopole.webp"
+                  src="/Cabinet/Omar_Wahab_Orthopole_4_opti_800px.webp"
                   alt="Orthopole - cabinet du Dr Wahab"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: 'center 20%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-neutral-900/20 to-transparent"></div>
               </div>
@@ -56,8 +57,8 @@ export default function ContactPage() {
                     <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
                       Orthopôle à Bruges
                     </h3>
-                    <p className="text-neutral-600 font-light leading-relaxed text-lg">
-53 bis avenue Maryse Bastié<br />
+                    <p className="text-neutral-600 font-light leading-relaxed text-sm">
+                      53 bis avenue Maryse Bastié<br />
                       33520 Bruges
                     </p>
                     <div className="mt-4">
@@ -75,7 +76,7 @@ export default function ContactPage() {
                     <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
                       Clinique CLEO à Bordeaux
                     </h3>
-                    <p className="text-neutral-600 font-light leading-relaxed text-lg">
+                    <p className="text-neutral-600 font-light leading-relaxed text-sm">
                       12 rue Falquet<br />
                       33000 Bordeaux
                     </p>

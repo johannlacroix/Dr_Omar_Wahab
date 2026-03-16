@@ -18,7 +18,7 @@ export default function VisagePage() {
     {
       title: 'Rhinoplastie',
       description: 'Remodelage du nez pour améliorer l\'harmonie du visage.',
-      image: '/Visage/pexels-shiny-diamond-3373732_opti_800px.webp',
+      image: '/Visage/freepik_beautiful-brunette-serious-girl-portrait_opti_800px.webp',
       position: 'left' as const,
     },
     {
@@ -36,7 +36,7 @@ export default function VisagePage() {
     {
       title: 'Lipofilling du visage',
       description: 'Injection de graisse autologue pour redonner du volume au visage.',
-      image: '/Esthétique/pexels-itslauravillela-35261735_opti_800px.webp',
+      image: '/Visage/pexels-shiny-diamond-3762408_opti_800px.webp',
       position: 'right' as const,
     },
     {

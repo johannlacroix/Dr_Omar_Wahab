@@ -107,8 +107,19 @@ export default function Home() {
               Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. 
               Accompagnement personnalisé pour votre bien-être et votre confiance.
             </p>
-            <div className="flex justify-center">
-              <DoctolibButton />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <DoctolibButton
+                size="hero"
+                label="Je prends rendez-vous à Bruges"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                className="w-full sm:w-72 md:w-80"
+              />
+              <DoctolibButton
+                size="hero"
+                label="Je prends rendez-vous à Bordeaux"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                className="w-full sm:w-72 md:w-80"
+              />
             </div>
           </div>
         </div>
