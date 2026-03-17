@@ -184,7 +184,7 @@ export default function AboutPage() {
               <CabinetCarousel />
               <div>
                 <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                  Le cabinet et la clinique
+                  Deux lieux de consultations et d&apos;opérations
                 </h3>
                 <p className="text-neutral-600 font-light leading-relaxed text-sm">
                   Les consultations ont lieu à Orthopole, à Bruges, au sein d’une structure médicale dédiée à la

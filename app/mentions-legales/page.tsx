@@ -39,7 +39,16 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">4. Propriété intellectuelle</h2>
+            <h2 className="text-2xl font-bold mb-4">4. Conception et réalisation</h2>
+            <p>
+              Conception et réalisation du site : Johann Lacroix, chef de projet digital.
+              <br />
+              Contact : <a href="mailto:projlacroix@gmail.com">projlacroix@gmail.com</a>
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold mb-4">5. Propriété intellectuelle</h2>
             <p>
               L'ensemble du contenu de ce site (textes, images, logos, etc.) 
               est la propriété du Dr. Omar Wahab et est protégé par les lois 
@@ -48,7 +57,7 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">5. Protection des données personnelles</h2>
+            <h2 className="text-2xl font-bold mb-4">6. Protection des données personnelles</h2>
             <p>
               Conformément au Règlement Général sur la Protection des Données (RGPD), 
               vous disposez d'un droit d'accès, de rectification, de suppression 
@@ -57,7 +66,7 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">6. Cookies</h2>
+            <h2 className="text-2xl font-bold mb-4">7. Cookies</h2>
             <p>
               Ce site utilise des cookies pour améliorer l'expérience utilisateur. 
               En continuant à naviguer sur ce site, vous acceptez l'utilisation de cookies.
@@ -65,7 +74,7 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">7. Responsabilité</h2>
+            <h2 className="text-2xl font-bold mb-4">8. Responsabilité</h2>
             <p>
               Le Dr. Omar Wahab s'efforce d'assurer l'exactitude des informations 
               diffusées sur ce site. Cependant, il ne peut garantir l'exactitude, 
@@ -74,7 +83,7 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">8. Contact</h2>
+            <h2 className="text-2xl font-bold mb-4">9. Contact</h2>
             <p>
               Pour toute question concernant ce site, vous pouvez nous contacter 
               via la page de contact ou prendre rendez-vous via Doctolib.
