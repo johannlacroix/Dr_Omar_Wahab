@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
-import { DoctolibButton } from './DoctolibButton';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,18 +74,6 @@ export function Header() {
               Contact
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full"></span>
             </Link>
-            <div className="ml-4 flex items-center gap-2">
-              <DoctolibButton
-                label="RDV Bruges"
-                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
-                className="text-[10px] px-3 py-2"
-              />
-              <DoctolibButton
-                label="RDV Bordeaux"
-                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
-                className="text-[10px] px-3 py-2"
-              />
-            </div>
           </nav>
 
           <button
@@ -153,18 +140,6 @@ export function Header() {
               >
                 Contact
               </Link>
-              <div className="pt-4 px-2 space-y-2">
-                <DoctolibButton
-                  label="Je prends rendez-vous à Bruges"
-                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
-                  className="w-full"
-                />
-                <DoctolibButton
-                  label="Je prends rendez-vous à Bordeaux"
-                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
-                  className="w-full"
-                />
-              </div>
             </nav>
           </div>
         )}

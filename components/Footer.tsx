@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { DoctolibButton } from './DoctolibButton';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -95,21 +94,28 @@ export function Footer() {
 
           <div>
             <h4 className="font-light mb-6 text-white tracking-wide uppercase text-sm">Prendre rendez-vous</h4>
-            <p className="text-neutral-400 text-sm mb-6 font-light leading-relaxed">
-              Réservez votre consultation en ligne
-            </p>
-            <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-2">
-              <DoctolibButton
-                label="Je prends rendez-vous à Bruges"
-                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
-                className="w-full sm:w-auto"
-              />
-              <DoctolibButton
-                label="Je prends rendez-vous à Bordeaux"
-                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
-                className="w-full sm:w-auto"
-              />
-            </div>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-200 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block"
+                >
+                  A Bruges
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-200 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block"
+                >
+                  A Bordeaux
+                </Link>
+              </li>
+            </ul>
             <div className="mt-8">
               <h4 className="font-light mb-4 text-white tracking-wide uppercase text-sm">Réseaux sociaux</h4>
               <div className="flex space-x-4">
