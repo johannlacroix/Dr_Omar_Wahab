@@ -4,8 +4,8 @@ import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Accueil - Dr. Omar Wahab | Chirurgien Esthétique à Bruges",
-  description: "Dr. Omar Wahab, chirurgien esthétique à Bruges. Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Consultation sur rendez-vous.",
+  title: "Accueil - Dr. Omar Wahab | Chirurgien Esthétique à Bruges et Bordeaux",
+  description: "Dr. Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Consultation sur rendez-vous.",
 };
 
 export default function Home() {
@@ -101,7 +101,7 @@ export default function Home() {
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-2xl md:text-3xl text-white/95 font-light tracking-wide mb-4">
-              Chirurgien Esthétique à Bruges
+              Chirurgien Esthétique à Bruges et Bordeaux
             </p>
             <p className="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto leading-relaxed mb-12">
               Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. 

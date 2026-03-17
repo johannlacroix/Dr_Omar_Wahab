@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Omar Wahab - Chirurgien Esthétique à Bruges",
+  title: "Dr. Omar Wahab - Chirurgien Esthétique à Bruges et Bordeaux",
   description: "Chirurgien esthétique à Bruges, spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Prenez rendez-vous en ligne.",
   keywords: "chirurgien esthétique, bruges, chirurgie mammaire, chirurgie visage, médecine esthétique, botox, acide hyaluronique",
   authors: [{ name: "Dr. Omar Wahab" }],
   openGraph: {
-    title: "Dr. Omar Wahab - Chirurgien Esthétique à Bruges",
+    title: "Dr. Omar Wahab - Chirurgien Esthétique à Bruges et Bordeaux",
     description: "Chirurgien esthétique spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique.",
     type: "website",
     locale: "fr_FR",
