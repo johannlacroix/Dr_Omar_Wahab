@@ -118,8 +118,17 @@ export default function ChirurgieDermatologiquePage() {
             <p className="text-neutral-600 mb-8 font-light text-sm">
               Réservez une consultation pour évaluer une lésion cutanée ou discuter d’une correction cicatricielle.
             </p>
-            <div className="flex justify-center">
-              <DoctolibButton />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <DoctolibButton
+                label="Je prends rendez-vous à Bruges"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                className="w-full sm:w-64"
+              />
+              <DoctolibButton
+                label="Je prends rendez-vous à Bordeaux"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                className="w-full sm:w-64"
+              />
             </div>
           </div>
         </div>

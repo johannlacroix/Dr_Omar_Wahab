@@ -214,8 +214,17 @@ export default function AboutPage() {
                 Prenez rendez-vous pour une consultation personnalisée et discuter 
                 de vos projets esthétiques.
               </p>
-              <div className="flex justify-center">
-                <DoctolibButton />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <DoctolibButton
+                  label="Je prends rendez-vous à Bruges"
+                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                  className="w-full sm:w-64"
+                />
+                <DoctolibButton
+                  label="Je prends rendez-vous à Bordeaux"
+                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                  className="w-full sm:w-64"
+                />
               </div>
             </div>
           </div>

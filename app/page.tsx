@@ -287,8 +287,17 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-white/90 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
               Prenez rendez-vous pour une consultation personnalisée
             </p>
-            <div className="flex justify-center">
-              <DoctolibButton />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <DoctolibButton
+                label="Je prends rendez-vous à Bruges"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                className="w-full sm:w-64"
+              />
+              <DoctolibButton
+                label="Je prends rendez-vous à Bordeaux"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                className="w-full sm:w-64"
+              />
             </div>
           </div>
         </div>

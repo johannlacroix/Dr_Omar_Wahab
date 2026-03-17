@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Cabinet/Omar_Wahab_Orthopole_4_opti_800px.webp"
+                  src="/Cabinet/Omar_Wahab_Salle d_attente_4.jpeg"
                   alt="Orthopole - cabinet du Dr Wahab"
                   fill
                   className="object-cover"
@@ -99,7 +99,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Cabinet/Emilie_Secrétaire (1).png"
+                  src="/Cabinet/fde2da89-ce24-440d-92b9-0ed06952926a.png"
                   alt="Horaires et accueil du cabinet"
                   fill
                   className="object-cover"
@@ -130,8 +130,17 @@ export default function ContactPage() {
                   <p className="text-neutral-600 mb-6 font-light leading-relaxed text-lg">
                     Pour réserver une consultation, utilisez la plateforme de réservation en ligne Doctolib.
                   </p>
-                  <div className="flex justify-center md:justify-start">
-                    <DoctolibButton />
+                  <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-2">
+                    <DoctolibButton
+                      label="Je prends rendez-vous à Bruges"
+                      href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                      className="w-full sm:w-auto"
+                    />
+                    <DoctolibButton
+                      label="Je prends rendez-vous à Bordeaux"
+                      href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                      className="w-full sm:w-auto"
+                    />
                   </div>
                 </div>
               </div>
@@ -229,8 +238,17 @@ export default function ContactPage() {
               <p className="text-xl text-neutral-600 font-light mb-10 max-w-2xl mx-auto leading-relaxed">
                 Réservez votre consultation en ligne en quelques clics
               </p>
-              <div className="flex justify-center">
-                <DoctolibButton />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <DoctolibButton
+                  label="Je prends rendez-vous à Bruges"
+                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                  className="w-full sm:w-64"
+                />
+                <DoctolibButton
+                  label="Je prends rendez-vous à Bordeaux"
+                  href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                  className="w-full sm:w-64"
+                />
               </div>
             </div>
           </div>

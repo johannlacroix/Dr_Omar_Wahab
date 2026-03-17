@@ -98,7 +98,18 @@ export function Footer() {
             <p className="text-neutral-400 text-sm mb-6 font-light leading-relaxed">
               Réservez votre consultation en ligne
             </p>
-            <DoctolibButton />
+            <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-2">
+              <DoctolibButton
+                label="Je prends rendez-vous à Bruges"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
+                className="w-full sm:w-auto"
+              />
+              <DoctolibButton
+                label="Je prends rendez-vous à Bordeaux"
+                href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
+                className="w-full sm:w-auto"
+              />
+            </div>
             <div className="mt-8">
               <h4 className="font-light mb-4 text-white tracking-wide uppercase text-sm">Réseaux sociaux</h4>
               <div className="flex space-x-4">
