@@ -189,12 +189,14 @@ export default function AboutPage() {
                 <p className="text-neutral-600 font-light leading-relaxed text-sm">
                   Les consultations ont lieu à Orthopole, à Bruges, au sein d’une structure médicale dédiée à la
                   chirurgie plastique, disposant d’un bloc de petite chirurgie pour les gestes sous anesthésie locale
-                  et d’une équipe formée au suivi des cicatrices et au matériel postopératoire sur mesure.
+                  et d’une équipe formée au suivi des cicatrices et au matériel postopératoire sur mesure. Le Dr Wahab
+                  consulte également à la clinique CLEO, à Bordeaux, afin de proposer un accès facilité aux patient·e·s
+                  de la rive gauche.
                 </p>
                 <p className="text-neutral-600 font-light leading-relaxed text-sm mt-4">
                   Les interventions de chirurgie esthétique non conventionnées sont réalisées à la clinique Jean
-                  Villar, établissement certifié par la Haute Autorité de Santé, doté d’un plateau technique complet
-                  et d’un service d’anesthésie spécialisé.
+                  Villar à Bruges et à la clinique CLEO à Bordeaux, établissements certifiés par la Haute Autorité de
+                  Santé, dotés d’un plateau technique complet et de services d’anesthésie spécialisés.
                 </p>
               </div>
             </div>
