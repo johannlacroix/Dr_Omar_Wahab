@@ -4,7 +4,7 @@ import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Accueil - Dr. Omar Wahab | Chirurgien Esthétique à Bruges et Bordeaux",
+  title: "Accueil - Dr. Omar Wahab | Chirurgien esthétique à Bruges et Bordeaux",
   description: "Dr. Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Consultation sur rendez-vous.",
 };
 
@@ -101,7 +101,7 @@ export default function Home() {
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-2xl md:text-3xl text-white/95 font-light tracking-wide mb-4">
-              Chirurgien Esthétique à Bruges et Bordeaux
+              Chirurgien esthétique à Bruges et Bordeaux
             </p>
             <p className="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto leading-relaxed mb-12">
               Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. 
@@ -289,14 +289,16 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <DoctolibButton
+                size="hero"
                 label="Je prends rendez-vous à Bruges"
                 href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
-                className="w-full sm:w-64"
+                className="w-full sm:w-72 md:w-80"
               />
               <DoctolibButton
+                size="hero"
                 label="Je prends rendez-vous à Bordeaux"
                 href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
-                className="w-full sm:w-64"
+                className="w-full sm:w-72 md:w-80"
               />
             </div>
           </div>

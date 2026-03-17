@@ -158,12 +158,18 @@ export default function ContactPage() {
                   une éventuelle intervention, ce formulaire et l’e-mail du cabinet peuvent aussi être utilisés pour
                   poser des questions complémentaires.
                 </p>
-                <form className="space-y-5">
+                <form
+                  className="space-y-5"
+                  method="POST"
+                  action="https://formspree.io/f/mnjgobpn"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm font-light text-neutral-700 mb-1.5">Nom</label>
                       <input
                         type="text"
+                        name="nom"
+                        required
                         className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
@@ -171,6 +177,8 @@ export default function ContactPage() {
                       <label className="block text-sm font-light text-neutral-700 mb-1.5">Prénom</label>
                       <input
                         type="text"
+                        name="prenom"
+                        required
                         className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
@@ -180,6 +188,8 @@ export default function ContactPage() {
                       <label className="block text-sm font-light text-neutral-700 mb-1.5">E-mail</label>
                       <input
                         type="email"
+                        name="email"
+                        required
                         className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
@@ -187,6 +197,7 @@ export default function ContactPage() {
                       <label className="block text-sm font-light text-neutral-700 mb-1.5">Téléphone</label>
                       <input
                         type="tel"
+                        name="telephone"
                         className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
@@ -195,7 +206,10 @@ export default function ContactPage() {
                     <label className="block text-sm font-light text-neutral-700 mb-1.5">
                       Type d&apos;intervention (indicatif)
                     </label>
-                    <select className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white">
+                    <select
+                      name="type_intervention"
+                      className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                    >
                       <option>Chirurgie mammaire</option>
                       <option>Chirurgie de la silhouette</option>
                       <option>Chirurgie du visage</option>
@@ -208,10 +222,14 @@ export default function ContactPage() {
                   <div>
                     <label className="block text-sm font-light text-neutral-700 mb-1.5">Votre message</label>
                     <textarea
+                      name="message"
                       rows={4}
+                      required
                       className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
                     />
                   </div>
+                  {/* Champ caché anti-spam (honeypot) */}
+                  <input type="text" name="_gotcha" style={{ display: 'none' }} />
                   <button
                     type="submit"
                     className="inline-flex items-center justify-center rounded-full border border-primary px-6 py-2.5 text-sm font-light text-primary hover:bg-primary hover:text-white transition-colors"
