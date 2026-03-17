@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,18 +32,8 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased`} suppressHydrationWarning>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-5E45GRMKCD"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5E45GRMKCD');
-          `}
-        </Script>
+        <GoogleAnalytics />
+        <CookieConsent />
         <Header />
         <main className="min-h-screen">
           {children}
