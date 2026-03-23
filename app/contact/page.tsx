@@ -15,7 +15,7 @@ export default function ContactPage() {
       <section className="relative py-20 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/Cabinet/Plaque_signal.png"
+            src="/Cabinet/Plaque_signal_opti_400Ko.webp"
             alt="Contact"
             fill
             className="object-cover"
@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Cabinet/Omar_Wahab_Salle d_attente_4.jpeg"
+                  src="/Cabinet/Omar_Wahab_Salle d_attente_4_opti_1200px.webp"
                   alt="Orthopole - cabinet du Dr Wahab"
                   fill
                   className="object-cover"
@@ -99,12 +99,13 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/Cabinet/fde2da89-ce24-440d-92b9-0ed06952926a.png"
+                  src="/Cabinet/Emilie_Secrétaire_Médicale_1536x435_300Ko_1200px.webp"
                   alt="Horaires et accueil du cabinet"
                   fill
                   className="object-cover"
                   style={{ objectPosition: 'center 35%' }}
                 />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-neutral-900/20 to-transparent"></div>
               </div>
               <div className="p-8 md:p-12">
