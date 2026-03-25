@@ -80,11 +80,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/avant-apres" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
-                  Avant / Après
-                </Link>
-              </li>
-              <li>
                 <Link href="/faq" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
                   Questions fréquentes
                 </Link>

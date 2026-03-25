@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Avant / Après - Dr. Omar Wahab | Résultats',
@@ -26,6 +27,9 @@ const placeholderCases = [
 ];
 
 export default function AvantApresPage() {
+  // Désactivé temporairement : la page sera remise en ligne une fois le contenu prêt.
+  notFound();
+
   return (
     <div className="min-h-screen">
       <section className="bg-background-soft py-20 md:py-32">

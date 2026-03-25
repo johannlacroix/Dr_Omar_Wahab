@@ -79,18 +79,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Autres pages de contenu
     {
-      url: `${baseUrl}/temoignages`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/avant-apres`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
       url: `${baseUrl}/faq`,
       lastModified: now,
       changeFrequency: 'monthly',
