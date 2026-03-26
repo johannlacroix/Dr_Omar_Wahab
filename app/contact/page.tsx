@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DoctolibButton } from '@/components/DoctolibButton';
 import { MapTabs } from '@/components/MapTabs';
+import { CleoGallerySection } from '@/components/CleoGallerySection';
+import { OrthopoleGallerySection } from '@/components/OrthopoleGallerySection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -36,77 +38,9 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-12">
-            {/* Coordonnées et adresses - Orthopôle */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src="/Cabinet/Omar_Wahab_Salle d_attente_4_opti_1200px.webp"
-                  alt="Orthopôle à Bruges"
-                  fill
-                  className="object-cover"
-                  style={{ objectPosition: 'center 20%' }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-neutral-900/20 to-transparent"></div>
-              </div>
-              <div className="p-8 md:p-12">
-                <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-8 tracking-tight">
-                  Coordonnées et adresses - Orthopôle
-                </h2>
-                <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
-                  Orthopôle à Bruges
-                </h3>
-                <p className="text-neutral-600 font-light leading-relaxed text-sm">
-                  53 bis avenue Maryse Bastié<br />
-                  33520 Bruges
-                </p>
-                <div className="mt-4">
-                  <Link
-                    href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
-                  >
-                    Je prends rendez-vous à Orthopôle
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <OrthopoleGallerySection />
 
-            {/* Coordonnées et adresses - Clinique CLEO */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src="/CLEO/CLEO_7_1920px.webp"
-                  alt="Clinique CLEO à Bordeaux"
-                  fill
-                  className="object-cover"
-                  style={{ objectPosition: 'center 40%' }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-neutral-900/20 to-transparent"></div>
-              </div>
-              <div className="p-8 md:p-12">
-                <h2 className="text-2xl md:text-3xl font-light text-neutral-800 mb-8 tracking-tight">
-                  Coordonnées et adresses - Clinique CLEO
-                </h2>
-                <h3 className="font-light text-neutral-500 mb-3 tracking-wide uppercase text-sm">
-                  Clinique CLEO à Bordeaux
-                </h3>
-                <p className="text-neutral-600 font-light leading-relaxed text-sm">
-                  12 rue Falquet<br />
-                  33000 Bordeaux
-                </p>
-                <div className="mt-4">
-                  <Link
-                    href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
-                  >
-                    Je prends rendez-vous à CLEO
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <CleoGallerySection />
 
             {/* Horaires et prise de rendez-vous */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
