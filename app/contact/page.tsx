@@ -7,8 +7,8 @@ import { OrthopoleGallerySection } from '@/components/OrthopoleGallerySection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact - Dr. Omar Wahab | Prendre rendez-vous",
-  description: "Contactez le Dr. Omar Wahab, chirurgien esthétique à Bruges. Prenez rendez-vous en ligne via Doctolib.",
+  title: "Contact - Dr Omar Wahab | Prendre rendez-vous",
+  description: "Contactez le Dr Omar Wahab, chirurgien esthétique à Bruges. Prenez rendez-vous en ligne via Doctolib.",
 };
 
 export default function ContactPage() {

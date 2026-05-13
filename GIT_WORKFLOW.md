@@ -1,4 +1,4 @@
-# Workflow Git - Dr. Omar Wahab
+# Workflow Git - Dr Omar Wahab
 
 ## Branches disponibles
 

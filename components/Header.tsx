@@ -36,7 +36,7 @@ export function Header() {
           >
             <div className="flex flex-col">
               <h1 className="text-2xl lg:text-3xl font-light text-neutral-800 tracking-tight group-hover:text-primary transition-colors">
-                Dr. Omar Wahab
+                Dr Omar Wahab
               </h1>
               <span className="text-xs lg:text-sm text-neutral-600 font-light tracking-wider uppercase">
                 Chirurgien Esthétique

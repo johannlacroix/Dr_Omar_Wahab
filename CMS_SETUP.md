@@ -134,7 +134,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     slug: post.slug.current,
     excerpt: post.excerpt,
     content: post.content, // À convertir en HTML si nécessaire
-    author: post.author || 'Dr. Omar Wahab',
+    author: post.author || 'Dr Omar Wahab',
     publishedAt: post.publishedAt,
     category: post.category,
     image: post.image,

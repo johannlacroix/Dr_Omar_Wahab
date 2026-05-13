@@ -5,18 +5,30 @@ import { useState } from 'react';
 
 interface GynecomastieCardProps {
   image: string;
+  imagePosition?: 'left' | 'right';
 }
 
-export function GynecomastieCard({ image }: GynecomastieCardProps) {
+export function GynecomastieCard({ image, imagePosition = 'right' }: GynecomastieCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
+  const imageOrderClass = imagePosition === 'right' ? 'md:order-2' : '';
+  const textOrderClass = imagePosition === 'right' ? 'md:order-1' : '';
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div className="order-2 md:order-1">
+        <div className={`relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl ${imageOrderClass}`}>
+          <Image
+            src={image}
+            alt="Correction de gynécomastie"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className={textOrderClass}>
           <div className="w-12 h-0.5 bg-primary mb-4 rounded-full" />
           <div className="flex items-center gap-3 mb-4">
             <h3 className="text-xl md:text-2xl font-light text-neutral-800 tracking-tight">
@@ -44,14 +56,6 @@ export function GynecomastieCard({ image }: GynecomastieCardProps) {
           <p className="text-neutral-600 font-light leading-relaxed text-sm">
             Traitement de l’hypertrophie mammaire chez l’homme pour retrouver un thorax plus plat et harmonieux.
           </p>
-        </div>
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
-          <Image
-            src={image}
-            alt="Correction de gynécomastie"
-            fill
-            className="object-cover"
-          />
         </div>
       </div>
 

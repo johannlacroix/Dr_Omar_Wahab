@@ -1,6 +1,6 @@
-# Site Web - Dr. Omar Wahab
+# Site Web - Dr Omar Wahab
 
-Site vitrine responsive pour le Dr. Omar Wahab, chirurgien esthétique à Bruges.
+Site vitrine responsive pour le Dr Omar Wahab, chirurgien esthétique à Bruges.
 
 ## 🚀 Technologies
 

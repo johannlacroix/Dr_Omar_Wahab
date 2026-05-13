@@ -1,4 +1,4 @@
-# Charte Graphique - Dr. Omar Wahab
+# Charte Graphique - Dr Omar Wahab
 
 ## 🎨 Palette de Couleurs
 

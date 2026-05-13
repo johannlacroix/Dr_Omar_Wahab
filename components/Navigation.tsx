@@ -36,7 +36,7 @@ export function Navigation({ mobile = false, onClose }: NavigationProps) {
           onClick={handleToggle}
           className="flex items-center justify-between w-full text-[#4a4a4a] hover:text-[#d4af8c] transition-colors font-light text-sm tracking-wide py-2"
         >
-          <span>Services</span>
+          <span>Interventions</span>
           <svg
             className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
             fill="none"
@@ -72,7 +72,7 @@ export function Navigation({ mobile = false, onClose }: NavigationProps) {
   return (
     <div className="relative group">
       <button className="text-[#4a4a4a] hover:text-[#d4af8c] transition-colors font-light text-sm tracking-wide relative flex items-center">
-        Services
+        Interventions
         <svg
           className="w-3 h-3 ml-1 transition-transform group-hover:rotate-180 duration-300"
           fill="none"

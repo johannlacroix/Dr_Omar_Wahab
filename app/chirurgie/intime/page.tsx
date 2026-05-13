@@ -4,9 +4,9 @@ import { DoctolibButton } from '@/components/DoctolibButton';
 import { NymphoplastieCard } from '@/components/NymphoplastieCard';
 
 export const metadata: Metadata = {
-  title: 'Chirurgie Intime - Dr. Omar Wahab | Femme et Homme',
+  title: 'Chirurgie Intime - Dr Omar Wahab | Femme',
   description:
-    'Chirurgie intime à Bruges : prise en charge discrète et personnalisée des demandes féminines et masculines. Consultations avec le Dr Omar Wahab.',
+    'Chirurgie intime féminine à Bruges : prise en charge discrète et personnalisée. Consultations avec le Dr Omar Wahab.',
 };
 
 export default function ChirurgieIntimePage() {
@@ -15,11 +15,6 @@ export default function ChirurgieIntimePage() {
       title: 'Chirurgie intime féminine',
       description:
         'Prise en charge des gênes fonctionnelles ou esthétiques intimes (lèvres, volume, cicatrices) dans le respect de l’anatomie et des attentes de chaque patiente.',
-    },
-    {
-      title: 'Chirurgie intime masculine',
-      description:
-        'Correction de certaines anomalies de forme ou de volume, ainsi que de séquelles cicatricielles, avec une information précise sur les bénéfices et les limites.',
     },
     {
       title: 'Séquelles et cicatrices',
@@ -78,7 +73,7 @@ export default function ChirurgieIntimePage() {
 
       <section className="py-16 md:py-24 bg-background-soft">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             {actes.map((acte) => (
               <div
                 key={acte.title}

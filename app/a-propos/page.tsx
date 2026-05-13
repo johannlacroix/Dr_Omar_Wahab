@@ -5,8 +5,8 @@ import { ReferencesCard } from '@/components/ReferencesCard';
 import { CabinetCarousel } from '@/components/CabinetCarousel';
 
 export const metadata: Metadata = {
-  title: "À propos - Dr. Omar Wahab | Chirurgien Esthétique",
-  description: "Découvrez le parcours et l'expertise du Dr. Omar Wahab, chirurgien esthétique à Bruges.",
+  title: "À propos - Dr Omar Wahab | Chirurgien Esthétique",
+  description: "Découvrez le parcours et l'expertise du Dr Omar Wahab, chirurgien esthétique à Bruges.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
                 <h1 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight" style={{ fontWeight: 300 }}>
-                  Dr. Omar Wahab
+                  Dr Omar Wahab
                 </h1>
                 <p className="text-neutral-600 text-sm font-light leading-relaxed" style={{ fontWeight: 300 }}>
                   Diplômé en chirurgie plastique, reconstructrice et esthétique et inscrit au Conseil National de
@@ -33,7 +33,7 @@ export default function AboutPage() {
                 <div className="relative w-full max-w-xs aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/Cabinet/Dr_Omar_Wahab_portrait.webp"
-                    alt="Dr. Omar Wahab"
+                    alt="Dr Omar Wahab"
                     fill
                     className="object-cover"
                     priority
@@ -102,7 +102,7 @@ export default function AboutPage() {
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/Silouhette/wellness-beauty-concept-beautiful-slim-woman-white-underwear-sitting-white-floor_opti_800px.webp"
-                  alt="Formation et expertise"
+                  alt="Femme assise en sous-vêtements blancs sur un fond clair, ambiance bien-être et esthétique"
                   fill
                   className="object-cover"
                 />
@@ -112,7 +112,7 @@ export default function AboutPage() {
                   Formation et Expertise
                 </h2>
                 <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">
-                  Diplômé et formé dans les meilleures institutions, le Dr. Wahab 
+                  Diplômé et formé dans les meilleures institutions, le Dr Wahab 
                   possède une expertise approfondie dans plusieurs domaines de la 
                   chirurgie esthétique :
                 </p>

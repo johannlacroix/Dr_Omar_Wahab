@@ -4,11 +4,10 @@ import type { Metadata } from 'next';
 import { BotoxCard } from '@/components/BotoxCard';
 import { HyaluroniqueCard } from '@/components/HyaluroniqueCard';
 import { AntiAgeCard } from '@/components/AntiAgeCard';
-import { MesotherapieCard } from '@/components/MesotherapieCard';
 
 export const metadata: Metadata = {
-  title: "Médecine Esthétique - Dr. Omar Wahab | Botox, Acide Hyaluronique",
-  description: "Médecine esthétique à Bruges : injections de Botox, acide hyaluronique, traitements non invasifs. Consultations avec le Dr. Omar Wahab.",
+  title: "Médecine Esthétique - Dr Omar Wahab | Botox, Acide Hyaluronique",
+  description: "Médecine esthétique à Bruges : injections de Botox, acide hyaluronique, traitements non invasifs. Consultations avec le Dr Omar Wahab.",
   keywords: "médecine esthétique, botox, acide hyaluronique, injections, bruges",
 };
 
@@ -31,12 +30,6 @@ export default function MedecineEsthetiquePage() {
       description: 'Soins et traitements pour préserver la jeunesse de la peau.',
       image: '/Esthétique/pexels-cottonbro-7582560_opti_800px.webp',
       position: 'left' as const,
-    },
-    {
-      title: 'Mésothérapie',
-      description: 'Injection de vitamines et principes actifs pour revitaliser la peau.',
-      image: '/Esthétique/pexels-cottonbro-7582568_opti_800px.webp',
-      position: 'right' as const,
     },
   ];
 
@@ -92,8 +85,6 @@ export default function MedecineEsthetiquePage() {
                 <HyaluroniqueCard key={index} image={traitement.image} />
               ) : traitement.title === 'Traitements anti-âge' ? (
                 <AntiAgeCard key={index} image={traitement.image} />
-              ) : traitement.title === 'Mésothérapie' ? (
-                <MesotherapieCard key={index} image={traitement.image} />
               ) : (
                 <div
                   key={index}

@@ -102,7 +102,7 @@ export function AntiAgeCard({ image }: AntiAgeCardProps) {
                   </li>
                   <li>
                     <span className="font-medium">Stimulation</span> : traitements qui favorisent la production de
-                    collagène et d’élastine (mésothérapie, peelings légers, soins ciblés).
+                    collagène et d’élastine (peelings légers, soins ciblés).
                   </li>
                   <li>
                     <span className="font-medium">Prévention des rides</span> : prise en charge précoce des rides

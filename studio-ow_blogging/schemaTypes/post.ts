@@ -33,7 +33,7 @@ export default defineType({
       name: 'author',
       title: 'Auteur',
       type: 'string',
-      initialValue: 'Dr. Omar Wahab',
+      initialValue: 'Dr Omar Wahab',
       validation: (Rule) => Rule.required(),
     }),
     defineField({

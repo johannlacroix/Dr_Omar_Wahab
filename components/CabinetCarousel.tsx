@@ -3,11 +3,17 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-const slides = [
-  { src: '/Cabinet/Int_Cabinet.png', alt: 'Intérieur du cabinet' },
-  { src: '/Cabinet/Couloir_cabinet.png', alt: 'Couloir du cabinet' },
-  { src: '/Cabinet/Salle_d_attente.webp', alt: 'Salle d\'attente' },
+const cabinetSlides = [
+  { src: '/Cabinet/Int_Cabinet_Ortho_1920px.webp', alt: 'Intérieur du cabinet Orthopôle' },
+  { src: '/Cabinet/Couloir_cabinetCLEO_1920px.webp', alt: 'Couloir du cabinet' },
 ];
+
+const cleoSlides = Array.from({ length: 17 }, (_, i) => ({
+  src: `/CLEO/CLEO_${i + 1}_1920px.webp`,
+  alt: `Clinique CLEO, Bordeaux — vue ${i + 1}`,
+}));
+
+const slides = [...cabinetSlides, ...cleoSlides];
 
 export function CabinetCarousel() {
   const [index, setIndex] = useState(0);

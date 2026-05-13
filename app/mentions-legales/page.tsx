@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Mentions Légales - Dr. Omar Wahab",
-  description: "Mentions légales du site du Dr. Omar Wahab, chirurgien esthétique à Bruges.",
+  title: "Mentions Légales - Dr Omar Wahab",
+  description: "Mentions légales du site du Dr Omar Wahab, chirurgien esthétique à Bruges.",
   robots: {
     index: false,
     follow: false,
@@ -19,14 +19,14 @@ export default function MentionsLegalesPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">1. Éditeur du site</h2>
             <p>
-              Le site www.dr-omar-wahab.fr est édité par le Dr. Omar Wahab,
+              Le site www.dr-omar-wahab.fr est édité par le Dr Omar Wahab,
               chirurgien esthétique exerçant à Bruges.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">2. Directeur de publication</h2>
-            <p>Dr. Omar Wahab</p>
+            <p>Dr Omar Wahab</p>
           </section>
 
           <section className="mb-8">
@@ -51,7 +51,7 @@ export default function MentionsLegalesPage() {
             <h2 className="text-2xl font-bold mb-4">5. Propriété intellectuelle</h2>
             <p>
               L'ensemble du contenu de ce site (textes, images, logos, etc.) 
-              est la propriété du Dr. Omar Wahab et est protégé par les lois 
+              est la propriété du Dr Omar Wahab et est protégé par les lois 
               sur la propriété intellectuelle.
             </p>
           </section>
@@ -76,7 +76,7 @@ export default function MentionsLegalesPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">8. Responsabilité</h2>
             <p>
-              Le Dr. Omar Wahab s'efforce d'assurer l'exactitude des informations 
+              Le Dr Omar Wahab s'efforce d'assurer l'exactitude des informations 
               diffusées sur ce site. Cependant, il ne peut garantir l'exactitude, 
               la complétude ou l'actualité des informations.
             </p>

@@ -8,8 +8,8 @@ import { LiftingCuissesCard } from '@/components/LiftingCuissesCard';
 import { BodyLiftCard } from '@/components/BodyLiftCard';
 
 export const metadata: Metadata = {
-  title: "Chirurgie de la Silhouette - Dr. Omar Wahab | Lipoaspiration, Abdominoplastie",
-  description: "Chirurgie de la silhouette à Bruges : lipoaspiration, abdominoplastie, lifting des bras et cuisses. Consultations avec le Dr. Omar Wahab.",
+  title: "Chirurgie de la Silhouette - Dr Omar Wahab | Lipoaspiration, Abdominoplastie",
+  description: "Chirurgie de la silhouette à Bruges : lipoaspiration, abdominoplastie, lifting des bras et cuisses. Consultations avec le Dr Omar Wahab.",
   keywords: "chirurgie silhouette, lipoaspiration, abdominoplastie, lifting bras, bruges",
 };
 
@@ -86,7 +86,7 @@ export default function SilhouettePage() {
             <div className="prose prose-lg max-w-none text-center">
               <p className="text-lg text-neutral-600 mb-8 font-light leading-relaxed">
                 La chirurgie de la silhouette regroupe différentes interventions 
-                visant à remodeler et affiner le corps. Le Dr. Omar Wahab propose 
+                visant à remodeler et affiner le corps. Le Dr Omar Wahab propose 
                 des techniques modernes et adaptées à chaque morphologie.
               </p>
             </div>
@@ -178,7 +178,7 @@ export default function SilhouettePage() {
                 Techniques modernes
               </h2>
               <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">
-                Le Dr. Wahab utilise les techniques les plus récentes pour 
+                Le Dr Wahab utilise les techniques les plus récentes pour 
                 garantir des résultats naturels et harmonieux, avec un minimum 
                 de cicatrices et une récupération optimisée.
               </p>

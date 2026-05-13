@@ -96,7 +96,7 @@ function convertSanityPostToBlogPost(post: SanityPost): BlogPost {
     slug: post.slug.current,
     excerpt: post.excerpt || '',
     content: toHTML(post.content || []),
-    author: post.author || 'Dr. Omar Wahab',
+    author: post.author || 'Dr Omar Wahab',
     publishedAt: post.publishedAt,
     image: imageUrl,
     imageAlt: post.mainImage?.alt || post.title,

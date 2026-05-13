@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Questions fréquentes - Dr. Omar Wahab | FAQ',
+  title: 'Questions fréquentes - Dr Omar Wahab | FAQ',
   description:
     'Questions fréquentes sur la chirurgie esthétique, la convalescence, les risques et le déroulement des consultations avec le Dr Omar Wahab.',
 };

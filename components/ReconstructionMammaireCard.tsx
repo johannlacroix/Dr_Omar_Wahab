@@ -5,18 +5,22 @@ import { useState } from 'react';
 
 interface ReconstructionMammaireCardProps {
   image: string;
+  imagePosition?: 'left' | 'right';
 }
 
-export function ReconstructionMammaireCard({ image }: ReconstructionMammaireCardProps) {
+export function ReconstructionMammaireCard({ image, imagePosition = 'left' }: ReconstructionMammaireCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
+  const imageOrderClass = imagePosition === 'right' ? 'md:order-2' : '';
+  const textOrderClass = imagePosition === 'right' ? 'md:order-1' : '';
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+        <div className={`relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl ${imageOrderClass}`}>
           <Image
             src={image}
             alt="Reconstruction mammaire"
@@ -24,7 +28,7 @@ export function ReconstructionMammaireCard({ image }: ReconstructionMammaireCard
             className="object-cover"
           />
         </div>
-        <div>
+        <div className={textOrderClass}>
           <div className="w-12 h-0.5 bg-primary mb-4 rounded-full" />
           <div className="flex items-center gap-3 mb-4">
             <h3 className="text-xl md:text-2xl font-light text-neutral-800 tracking-tight">
@@ -50,7 +54,8 @@ export function ReconstructionMammaireCard({ image }: ReconstructionMammaireCard
             </button>
           </div>
           <p className="text-neutral-600 font-light leading-relaxed text-sm">
-            Reconstruction du sein après mastectomie ou malformation congénitale pour restaurer volume, galbe et équilibre de la silhouette.
+            Prise en charge des malformations mammaires congénitales et des asymétries pour restaurer volume,
+            galbe et équilibre de la silhouette.
           </p>
         </div>
       </div>
@@ -86,20 +91,22 @@ export function ReconstructionMammaireCard({ image }: ReconstructionMammaireCard
 
             <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
               <p>
-                La reconstruction mammaire a pour objectif de redonner un volume et une forme au sein après une
-                mastectomie, une tumorectomie étendue ou en cas de malformation congénitale. Elle permet de restaurer
-                l’équilibre de la silhouette et de contribuer au mieux-être psychologique de la patiente.
+                Le Dr Omar Wahab prend en charge la reconstruction mammaire principalement dans le cadre des
+                malformations mammaires congénitales (seins tubéreux, hypoplasie sévère, agénésie mammaire) et des
+                asymétries mammaires importantes. L’objectif est de restaurer le volume, la forme et l’équilibre de
+                la poitrine, et de contribuer au mieux-être de la patiente.
               </p>
               <p>
-                Selon chaque situation, la reconstruction peut utiliser des prothèses, la propre graisse de la patiente
-                (lipofilling) et/ou des lambeaux de tissus, éventuellement associés entre eux. La démarche est toujours
-                personnalisée : le Dr Omar Wahab prend en compte le traitement oncologique réalisé, la qualité de la
-                peau, la morphologie générale et les souhaits de la patiente.
+                La démarche est toujours personnalisée : qualité de la peau, morphologie générale, antécédents et
+                souhaits de la patiente sont pris en compte pour proposer la technique la plus adaptée. Selon les
+                situations, la prise en charge peut associer des prothèses, du lipofilling (graisse autologue) et/ou
+                des gestes de symétrisation du sein controlatéral, parfois en plusieurs étapes, afin d’obtenir un
+                résultat naturel et harmonieux.
               </p>
               <p>
-                La reconstruction peut être réalisée dans le même temps que la mastectomie (reconstruction immédiate) ou
-                à distance, lorsque les tissus sont stabilisés (reconstruction différée). Un travail de symétrisation du
-                sein controlatéral peut être proposé pour obtenir un résultat le plus harmonieux possible.
+                NB : la reconstruction mammaire immédiate dans le cadre d’un traitement oncologique (au cours de la
+                mastectomie) n’est pas réalisée dans le cabinet. Les reconstructions à distance d’une chirurgie du
+                cancer du sein peuvent en revanche être discutées au cas par cas.
               </p>
 
               <div>
@@ -137,15 +144,14 @@ export function ReconstructionMammaireCard({ image }: ReconstructionMammaireCard
                   Prise en charge par la Sécurité sociale
                 </h4>
                 <p>
-                  La reconstruction mammaire après cancer du sein, ainsi que les gestes de symétrisation du sein
-                  controlatéral, relèvent d’une prise en charge par la Sécurité sociale, sous réserve d’un accord dans le
-                  cadre du parcours de soins.
+                  Les malformations mammaires congénitales (seins tubéreux, hypoplasie sévère, agénésie) et les
+                  asymétries mammaires majeures peuvent relever d’une prise en charge par la Sécurité sociale, après
+                  évaluation au cas par cas.
                 </p>
                 <p>
-                  En cas de malformation congénitale importante (comme des seins tubéreux ou une asymétrie majeure), une
-                  prise en charge peut également être discutée au cas par cas après avis du chirurgien et, si besoin, de
-                  l’Assurance maladie. Les interventions strictement esthétiques, sans contexte reconstructeur, ne sont
-                  en revanche pas remboursées.
+                  Les gestes de reconstruction et de symétrisation à distance d’une chirurgie du cancer du sein peuvent
+                  également être pris en charge, dans le cadre du parcours de soins. Les interventions strictement
+                  esthétiques, sans contexte reconstructeur, ne sont en revanche pas remboursées.
                 </p>
               </div>
             </div>

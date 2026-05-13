@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { DoctolibButton } from '@/components/DoctolibButton';
 
 export const metadata: Metadata = {
-  title: 'Chirurgie Dermatologique - Dr. Omar Wahab | Lésions cutanées, nævus, tumeurs bénignes',
+  title: 'Chirurgie Dermatologique - Dr Omar Wahab | Lésions cutanées, nævus, tumeurs bénignes',
   description:
     'Chirurgie dermatologique à Bruges : exérèse de lésions cutanées, nævus, tumeurs bénignes et cicatrices. Consultations avec le Dr Omar Wahab.',
 };

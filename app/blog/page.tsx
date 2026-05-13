@@ -5,8 +5,8 @@ import { fr } from 'date-fns/locale';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Blog - Dr. Omar Wahab | Actualités et Conseils",
-  description: "Découvrez les articles du Dr. Omar Wahab sur la chirurgie esthétique, la médecine esthétique et les actualités du cabinet.",
+  title: "Blog - Dr Omar Wahab | Actualités et Conseils",
+  description: "Découvrez les articles du Dr Omar Wahab sur la chirurgie esthétique, la médecine esthétique et les actualités du cabinet.",
 };
 
 export default async function BlogPage() {

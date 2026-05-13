@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-4 lg:px-8 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           <div>
-            <h3 className="text-xl font-light mb-6 text-primary tracking-tight">Dr. Omar Wahab</h3>
+            <h3 className="text-xl font-light mb-6 text-primary tracking-tight">Dr Omar Wahab</h3>
             <p className="text-neutral-400 text-sm font-light leading-relaxed">
               Chirurgien esthétique à Bruges et Bordeaux, spécialisé en chirurgie mammaire, 
               silhouette, visage et médecine esthétique.
@@ -16,7 +16,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-light mb-6 text-white tracking-wide uppercase text-sm">Services</h4>
+            <h4 className="font-light mb-6 text-white tracking-wide uppercase text-sm">Interventions</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/chirurgie/mammaire" className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block">
@@ -121,7 +121,7 @@ export function Footer() {
 
         <div className="border-t border-neutral-800 mt-12 pt-8 text-center rounded-t-2xl">
           <p className="text-neutral-400 text-sm font-light">
-            © {currentYear} Dr. Omar Wahab. Tous droits réservés.
+            © {currentYear} Dr Omar Wahab. Tous droits réservés.
           </p>
           <p className="text-neutral-500 text-xs font-light mt-1">
             Site conçu par Johann Lacroix, chef de projet digital – <a href="mailto:projlacroix@gmail.com" className="underline hover:text-primary">projlacroix@gmail.com</a>

@@ -5,18 +5,30 @@ import { useState } from 'react';
 
 interface ReductionMammaireCardProps {
   image: string;
+  imagePosition?: 'left' | 'right';
 }
 
-export function ReductionMammaireCard({ image }: ReductionMammaireCardProps) {
+export function ReductionMammaireCard({ image, imagePosition = 'right' }: ReductionMammaireCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
+  const imageOrderClass = imagePosition === 'right' ? 'md:order-2' : '';
+  const textOrderClass = imagePosition === 'right' ? 'md:order-1' : '';
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div className="order-2 md:order-1">
+        <div className={`relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl ${imageOrderClass}`}>
+          <Image
+            src={image}
+            alt="Réduction mammaire"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className={textOrderClass}>
           <div className="w-12 h-0.5 bg-primary mb-4 rounded-full"></div>
           <div className="flex items-center gap-3 mb-4">
             <h3 className="text-xl md:text-2xl font-light text-neutral-800 tracking-tight">
@@ -37,14 +49,6 @@ export function ReductionMammaireCard({ image }: ReductionMammaireCardProps) {
             Diminution du volume mammaire pour soulager les douleurs et retrouver une poitrine plus légère,
             harmonieuse et adaptée à la morphologie.
           </p>
-        </div>
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
-          <Image
-            src={image}
-            alt="Réduction mammaire"
-            fill
-            className="object-cover"
-          />
         </div>
       </div>
 

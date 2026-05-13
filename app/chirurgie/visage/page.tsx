@@ -8,8 +8,8 @@ import { LipofillingVisageCard } from '@/components/LipofillingVisageCard';
 import { OtoplastieCard } from '@/components/OtoplastieCard';
 
 export const metadata: Metadata = {
-  title: "Chirurgie du Visage - Dr. Omar Wahab | Rhinoplastie, Blépharoplastie, Lifting",
-  description: "Chirurgie esthétique du visage à Bruges : rhinoplastie, blépharoplastie, lifting facial. Consultations avec le Dr. Omar Wahab.",
+  title: "Chirurgie du Visage - Dr Omar Wahab | Rhinoplastie, Blépharoplastie, Lifting",
+  description: "Chirurgie esthétique du visage à Bruges : rhinoplastie, blépharoplastie, lifting facial. Consultations avec le Dr Omar Wahab.",
   keywords: "chirurgie visage, rhinoplastie, blépharoplastie, lifting visage, bruges",
 };
 
@@ -79,7 +79,7 @@ export default function VisagePage() {
             <div className="prose prose-lg max-w-none text-center">
               <p className="text-lg text-neutral-600 mb-8 font-light leading-relaxed">
                 La chirurgie esthétique du visage permet de corriger, améliorer 
-                ou rajeunir les traits du visage. Le Dr. Omar Wahab maîtrise 
+                ou rajeunir les traits du visage. Le Dr Omar Wahab maîtrise 
                 différentes techniques pour des résultats naturels et harmonieux.
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function VisagePage() {
                 Résultats naturels
               </h2>
               <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">
-                Le Dr. Wahab privilégie des techniques préservatrices pour 
+                Le Dr Wahab privilégie des techniques préservatrices pour 
                 obtenir des résultats naturels qui respectent l'identité 
                 de chaque patient.
               </p>

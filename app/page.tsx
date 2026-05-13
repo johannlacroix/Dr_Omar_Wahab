@@ -4,8 +4,8 @@ import { DoctolibButton } from '@/components/DoctolibButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Accueil - Dr. Omar Wahab | Chirurgien esthétique à Bruges et Bordeaux",
-  description: "Dr. Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Consultation sur rendez-vous.",
+  title: "Accueil - Dr Omar Wahab | Chirurgien esthétique à Bruges et Bordeaux",
+  description: "Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Consultation sur rendez-vous.",
 };
 
 export default function Home() {
@@ -36,9 +36,9 @@ export default function Home() {
     },
     {
       title: 'Chirurgie Intime',
-      description: 'Prise en charge discrète et personnalisée des gênes intimes féminines et masculines.',
+      description: 'Prise en charge discrète et personnalisée des gênes intimes féminines.',
       href: '/chirurgie/intime',
-      image: '/Intime/pexels-jonaorle-12746161_opti_800px - Nympho_opti_800px.webp',
+      image: '/Intime/pexels-pixabay-414362_opti_800px.webp',
     },
     {
       title: 'Injections & Médecine Esthétique',
@@ -84,8 +84,8 @@ export default function Home() {
       <section className="relative min-h-[75vh] flex items-center py-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/Silouhette/pexels-diana-akhmedova-84744860-18980551_opti_1080px.webp"
-            alt="Dr. Omar Wahab"
+            src="/Silouhette/wellness-beauty-concept-beautiful-slim-woman-white-underwear-sitting-white-floor_opti_800px.webp"
+            alt="Femme assise en sous-vêtements blancs sur un fond clair, ambiance bien-être et esthétique"
             fill
             className="object-cover"
             priority
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8 relative z-10 w-full">
           <div className="max-w-4xl mx-auto text-center py-20">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight leading-tight">
-              Dr. Omar Wahab
+              Dr Omar Wahab
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-2xl md:text-3xl text-white/95 font-light tracking-wide mb-4">
@@ -125,13 +125,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Services - Vertical, une carte par ligne sur mobile */}
+      {/* Section Interventions - Vertical, une carte par ligne sur mobile */}
       <section className="py-20 md:py-32 bg-background-soft">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-neutral-800 mb-4 tracking-tight">
-                Nos Services
+                Nos interventions
               </h2>
               <div className="w-16 h-0.5 bg-primary mx-auto mb-6 rounded-full"></div>
               <p className="text-lg text-neutral-600 font-light max-w-2xl mx-auto">
@@ -187,7 +187,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-neutral-800 mb-4 tracking-tight">
-                Principes fondamentaux de notre pratique
+                Principes fondamentaux de la pratique du Dr Wahab
               </h2>
               <div className="w-16 h-0.5 bg-primary mx-auto mb-6 rounded-full"></div>
             </div>
@@ -244,7 +244,7 @@ export default function Home() {
                   href="/a-propos"
                   className="inline-block px-8 py-3 bg-transparent border-2 border-primary text-primary font-light text-sm tracking-wide hover:bg-primary hover:text-white transition-all duration-300 rounded-lg"
                 >
-                  En savoir plus sur le Dr. Wahab
+                  En savoir plus sur le Dr Wahab
                 </Link>
               </div>
             </div>

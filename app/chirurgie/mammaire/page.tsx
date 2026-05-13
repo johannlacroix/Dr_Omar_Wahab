@@ -9,19 +9,24 @@ import { GynecomastieCard } from '@/components/GynecomastieCard';
 import { MamelonsInvaginesCard } from '@/components/MamelonsInvaginesCard';
 
 export const metadata: Metadata = {
-  title: "Chirurgie Mammaire - Dr. Omar Wahab | Augmentation, Réduction, Lifting",
-  description: "Chirurgie mammaire à Bruges : augmentation mammaire, réduction mammaire, lifting mammaire. Consultations avec le Dr. Omar Wahab.",
+  title: "Chirurgie Mammaire - Dr Omar Wahab | Augmentation, Réduction, Lifting",
+  description: "Chirurgie mammaire à Bruges : augmentation mammaire, réduction mammaire, lifting mammaire. Consultations avec le Dr Omar Wahab.",
   keywords: "chirurgie mammaire, augmentation mammaire, réduction mammaire, lifting mammaire, bruges",
 };
 
+const augmentationProthesesImage = '/Mammaire/close-up-hands-holding-breast-implants_800px.webp';
+const augmentationLipofillingImage = '/Mammaire/pexels-anntarazevich-5629208_800px.webp';
+
+const augmentationProthesesImageCredit = {
+  href: 'https://www.magnific.com/free-photo/close-up-hands-holding-breast-implants_18492683.htm',
+  label: 'Image by freepik',
+};
+
+const augmentationLipofillingImageAlt =
+  'Augmentation mammaire par lipofilling — photo : Anna Tarazevich, Pexels';
+
 export default function MammairePage() {
   const interventions = [
-    {
-      title: 'Augmentation mammaire',
-      description: 'Augmentation du volume mammaire par prothèses ou lipofilling pour retrouver une poitrine harmonieuse.',
-      image: '/Mammaire/pexels-jotavaz-27659535_opti_800px.webp',
-      position: 'left' as const,
-    },
     {
       title: 'Réduction mammaire',
       description: 'Réduction du volume mammaire pour améliorer le confort et l\'esthétique.',
@@ -42,7 +47,8 @@ export default function MammairePage() {
     },
     {
       title: 'Reconstruction mammaire',
-      description: 'Reconstruction après mastectomie ou malformation congénitale.',
+      description:
+        'Prise en charge des malformations mammaires congénitales et des asymétries mammaires importantes.',
       image: '/Mammaire/pexels-vtnt2-21045058_opti_800px.webp',
       position: 'left' as const,
     },
@@ -91,7 +97,7 @@ export default function MammairePage() {
               <p className="text-lg text-neutral-600 mb-8 font-light leading-relaxed">
                 La chirurgie mammaire regroupe l'ensemble des interventions 
                 visant à modifier la forme, le volume ou la position des seins. 
-                Le Dr. Omar Wahab propose différentes techniques adaptées à 
+                Le Dr Omar Wahab propose différentes techniques adaptées à 
                 chaque situation.
               </p>
             </div>
@@ -103,36 +109,51 @@ export default function MammairePage() {
       <section className="py-16 md:py-24 bg-background-soft">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-16">
-            {interventions.map((intervention, index) => (
-              intervention.title === 'Augmentation mammaire' ? (
-                <AugmentationMammaireCard
-                  key={index}
-                  image={intervention.image}
-                />
-              ) : intervention.title === 'Réduction mammaire' ? (
+            <AugmentationMammaireCard
+              variant="protheses"
+              image={augmentationProthesesImage}
+              imagePosition="left"
+              imageCredit={augmentationProthesesImageCredit}
+            />
+            <AugmentationMammaireCard
+              variant="lipofilling"
+              image={augmentationLipofillingImage}
+              imagePosition="right"
+              imageAlt={augmentationLipofillingImageAlt}
+            />
+            {interventions.map((intervention, index) => {
+              // Alternance globale : prothèses=0 (left), lipofilling=1 (right),
+              // puis ces cartes : index 0..n alternent left/right en partant de left.
+              const imagePosition: 'left' | 'right' = index % 2 === 0 ? 'left' : 'right';
+              return intervention.title === 'Réduction mammaire' ? (
                 <ReductionMammaireCard
                   key={index}
                   image={intervention.image}
+                  imagePosition={imagePosition}
                 />
               ) : intervention.title === 'Lifting mammaire' ? (
                 <LiftingMammaireCard
                   key={index}
                   image={intervention.image}
+                  imagePosition={imagePosition}
                 />
               ) : intervention.title === 'Correction de gynécomastie' ? (
                 <GynecomastieCard
                   key={index}
                   image={intervention.image}
+                  imagePosition={imagePosition}
                 />
               ) : intervention.title === 'Reconstruction mammaire' ? (
                 <ReconstructionMammaireCard
                   key={index}
                   image={intervention.image}
+                  imagePosition={imagePosition}
                 />
               ) : intervention.title === 'Mamelons invaginés' ? (
                 <MamelonsInvaginesCard
                   key={index}
                   image={intervention.image}
+                  imagePosition={imagePosition}
                 />
               ) : (
               <div
@@ -179,8 +200,8 @@ export default function MammairePage() {
                   </>
                 )}
               </div>
-              )
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -199,7 +220,7 @@ export default function MammairePage() {
                 déterminer la technique la plus adaptée à votre situation.
               </p>
               <p className="text-neutral-600 font-light leading-relaxed text-sm">
-                Le Dr. Wahab prendra le temps de répondre à toutes vos questions 
+                Le Dr Wahab prendra le temps de répondre à toutes vos questions 
                 et de vous expliquer le déroulement de l'intervention, les suites 
                 opératoires et les résultats attendus.
               </p>

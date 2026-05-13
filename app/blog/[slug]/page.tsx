@@ -30,7 +30,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} - Blog Dr. Omar Wahab`,
+    title: `${post.title} - Blog Dr Omar Wahab`,
     description: post.excerpt,
   };
 }
