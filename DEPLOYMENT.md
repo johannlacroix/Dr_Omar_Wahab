@@ -25,9 +25,26 @@
    - Allez dans "Environment Variables"
    - Ajoutez `NEXT_PUBLIC_SITE_URL` avec votre domaine
 
-4. **Déploiement automatique**
-   - Vercel déploiera automatiquement à chaque push
-   - Vous recevrez une URL de prévisualisation
+4. **Déploiement automatique par branche**
+
+   Le fichier `vercel.json` à la racine configure les déploiements :
+
+   | Branche   | Vercel                          |
+   |-----------|----------------------------------|
+   | `main`    | Production                       |
+   | `recette` | Preview (environnement de test)  |
+   | `dev`     | Aucun déploiement automatique    |
+
+   Pour mettre à jour l’environnement de recette après des changements sur `dev` :
+
+   ```bash
+   git checkout recette
+   git pull origin recette
+   git merge dev
+   git push origin recette
+   ```
+
+   URL de preview recette (exemple) : `https://dr-omar-wahab-git-recette-<team>.vercel.app`
 
 ### Méthode 2 : Via CLI Vercel
 

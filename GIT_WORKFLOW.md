@@ -13,11 +13,13 @@ Le projet utilise un workflow à 3 branches principales :
 - **Rôle** : Branche de développement actif
 - **Utilisation** : Toutes les nouvelles fonctionnalités et corrections de bugs
 - **Workflow** : `dev` → `recette` → `main`
+- **Déploiement Vercel** : désactivé (`vercel.json`)
 
 ### 🧪 `recette` (Staging/Recette)
 - **Rôle** : Environnement de test et validation
 - **Utilisation** : Tests avant mise en production
 - **Workflow** : `recette` → `main` (via Pull Request)
+- **Déploiement Vercel** : preview automatique à chaque push (`…-git-recette-….vercel.app`)
 
 ## Workflow recommandé
 
