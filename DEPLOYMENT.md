@@ -75,7 +75,7 @@ vercel
 ## Configuration du domaine personnalisé
 
 1. Dans Vercel, allez dans "Settings" > "Domains"
-2. Ajoutez votre domaine (ex: `www.dr-omar-wahab.fr`)
+2. Ajoutez votre domaine (ex: `dromarwahab.com`)
 3. Suivez les instructions DNS fournies
 4. Vercel générera automatiquement le certificat SSL
 
@@ -120,7 +120,7 @@ vercel
    ```nginx
    server {
        listen 80;
-       server_name www.dr-omar-wahab.fr;
+       server_name dromarwahab.com;
 
        location / {
            proxy_pass http://localhost:3000;
@@ -136,7 +136,7 @@ vercel
 4. **SSL avec Let's Encrypt**
    ```bash
    sudo apt install certbot python3-certbot-nginx
-   sudo certbot --nginx -d www.dr-omar-wahab.fr
+   sudo certbot --nginx -d dromarwahab.com
    ```
 
 ## Variables d'environnement
@@ -144,7 +144,7 @@ vercel
 Créez un fichier `.env.local` (ou configurez-les dans votre plateforme) :
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://www.dr-omar-wahab.fr
+NEXT_PUBLIC_SITE_URL=https://dromarwahab.com
 ```
 
 Si vous utilisez Sanity :

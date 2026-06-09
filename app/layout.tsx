@@ -13,7 +13,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.dr-omar-wahab.fr";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dromarwahab.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

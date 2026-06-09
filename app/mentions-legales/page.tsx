@@ -19,7 +19,7 @@ export default function MentionsLegalesPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">1. Éditeur du site</h2>
             <p>
-              Le site www.dr-omar-wahab.fr est édité par le Dr Omar Wahab,
+              Le site dromarwahab.com est édité par le Dr Omar Wahab,
               chirurgien esthétique exerçant à Bruges et Bordeaux.
             </p>
           </section>

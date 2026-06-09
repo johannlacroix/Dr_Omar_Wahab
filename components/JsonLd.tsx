@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.dr-omar-wahab.fr";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dromarwahab.com";
 
 const physicianSchema = {
   "@context": "https://schema.org",
