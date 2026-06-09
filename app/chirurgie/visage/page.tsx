@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Chirurgie du Visage - Dr Omar Wahab | Rhinoplastie, Blépharoplastie, Lifting",
   description: "Chirurgie esthétique du visage à Bruges et Bordeaux : rhinoplastie, blépharoplastie, lifting facial. Consultations avec le Dr Omar Wahab.",
   keywords: "chirurgie visage, rhinoplastie, blépharoplastie, lifting visage, bruges, bordeaux",
+  alternates: { canonical: "/chirurgie/visage" },
 };
 
 export default function VisagePage() {

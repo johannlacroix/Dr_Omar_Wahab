@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Avant / Après - Dr Omar Wahab | Résultats',
   description:
     'Galerie avant / après du Dr Omar Wahab, présentant des cas cliniques anonymisés avec consentement, en chirurgie esthétique et reconstructrice.',
+  alternates: { canonical: '/avant-apres' },
 };
 
 const placeholderCases = [

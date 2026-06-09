@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Questions fréquentes - Dr Omar Wahab | FAQ',
   description:
     'Questions fréquentes sur la chirurgie esthétique à Bruges et Bordeaux : convalescence, risques et déroulement des consultations avec le Dr Omar Wahab.',
+  alternates: { canonical: '/faq' },
 };
 
 const faqs = [

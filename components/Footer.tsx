@@ -123,7 +123,7 @@ export function Footer() {
           <p className="text-neutral-400 text-sm font-light">
             © {currentYear} Dr Omar Wahab. Tous droits réservés.
           </p>
-          <p className="text-neutral-500 text-xs font-light mt-1">
+          <p className="text-neutral-400 text-xs font-light mt-1">
             Site conçu par Johann Lacroix, chef de projet digital – <a href="mailto:projlacroix@gmail.com" className="underline hover:text-primary">projlacroix@gmail.com</a>
           </p>
         </div>

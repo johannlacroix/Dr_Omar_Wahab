@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Contact - Dr Omar Wahab | Prendre rendez-vous",
   description: "Contactez le Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Prenez rendez-vous en ligne via Doctolib.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

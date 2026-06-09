@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Chirurgie Intime - Dr Omar Wahab | Femme',
   description:
     'Chirurgie intime féminine à Bruges et Bordeaux : prise en charge discrète et personnalisée. Consultations avec le Dr Omar Wahab.',
+  alternates: { canonical: '/chirurgie/intime' },
 };
 
 export default function ChirurgieIntimePage() {

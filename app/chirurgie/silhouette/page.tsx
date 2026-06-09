@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Chirurgie de la Silhouette - Dr Omar Wahab | Lipoaspiration, Abdominoplastie",
   description: "Chirurgie de la silhouette à Bruges et Bordeaux : lipoaspiration, abdominoplastie, lifting des bras et cuisses. Consultations avec le Dr Omar Wahab.",
   keywords: "chirurgie silhouette, lipoaspiration, abdominoplastie, lifting bras, bruges, bordeaux",
+  alternates: { canonical: "/chirurgie/silhouette" },
 };
 
 export default function SilhouettePage() {

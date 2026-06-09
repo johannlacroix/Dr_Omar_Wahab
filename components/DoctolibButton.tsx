@@ -19,10 +19,10 @@ export function DoctolibButton({
   className,
 }: DoctolibButtonProps) {
   const baseClasses =
-    'inline-flex items-center justify-center bg-primary text-white font-light tracking-wide rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105';
+    'inline-flex items-center justify-center bg-primary-text text-white font-light tracking-wide rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105';
   const sizeClasses =
     size === 'hero'
-      ? 'px-3 md:px-4 lg:px-6 py-2 md:py-2.5 text-[9px] md:text-[11px] lg:text-xs'
+      ? 'px-3 md:px-4 lg:px-6 py-2 md:py-2.5 text-xs md:text-sm'
       : 'px-4 md:px-6 py-2.5 md:py-3 text-xs md:text-sm';
 
   return (

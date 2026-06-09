@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Médecine Esthétique - Dr Omar Wahab | Botox, Acide Hyaluronique",
   description: "Médecine esthétique à Bruges et Bordeaux : injections de Botox, acide hyaluronique, traitements non invasifs. Consultations avec le Dr Omar Wahab.",
   keywords: "médecine esthétique, botox, acide hyaluronique, injections, bruges, bordeaux",
+  alternates: { canonical: "/medecine-esthetique" },
 };
 
 export default function MedecineEsthetiquePage() {

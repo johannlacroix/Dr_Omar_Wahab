@@ -6,6 +6,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Accueil - Dr Omar Wahab | Chirurgien esthétique à Bruges et Bordeaux",
   description: "Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Spécialisé en chirurgie mammaire, silhouette, visage et médecine esthétique. Consultation sur rendez-vous.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {
@@ -89,6 +92,7 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
             quality={90}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/60 to-neutral-900/80"></div>
@@ -165,7 +169,7 @@ export default function Home() {
                         <p className="text-neutral-600 font-light text-lg leading-relaxed mb-6">
                           {service.description}
                         </p>
-                        <div className="text-primary font-light text-sm tracking-wide flex items-center group-hover:translate-x-2 transition-transform">
+                        <div className="text-primary-text font-light text-sm tracking-wide flex items-center group-hover:translate-x-2 transition-transform">
                           En savoir plus
                           <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
@@ -242,7 +246,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/a-propos"
-                  className="inline-block px-8 py-3 bg-transparent border-2 border-primary text-primary font-light text-sm tracking-wide hover:bg-primary hover:text-white transition-all duration-300 rounded-lg"
+                  className="inline-block px-8 py-3 bg-transparent border-2 border-primary-text text-primary-text font-light text-sm tracking-wide hover:bg-primary-text hover:text-white transition-all duration-300 rounded-lg"
                 >
                   En savoir plus sur le Dr Wahab
                 </Link>

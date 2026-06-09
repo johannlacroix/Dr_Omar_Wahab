@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Chirurgie Dermatologique - Dr Omar Wahab | Lésions cutanées, nævus, tumeurs bénignes',
   description:
     'Chirurgie dermatologique à Bruges et Bordeaux : exérèse de lésions cutanées, nævus, tumeurs bénignes et cicatrices. Consultations avec le Dr Omar Wahab.',
+  alternates: { canonical: '/chirurgie/dermatologique' },
 };
 
 export default function ChirurgieDermatologiquePage() {

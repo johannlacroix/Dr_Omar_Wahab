@@ -7,6 +7,7 @@ import { CabinetCarousel } from '@/components/CabinetCarousel';
 export const metadata: Metadata = {
   title: "À propos - Dr Omar Wahab | Chirurgien Esthétique",
   description: "Découvrez le parcours et l'expertise du Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux.",
+  alternates: { canonical: "/a-propos" },
 };
 
 export default function AboutPage() {

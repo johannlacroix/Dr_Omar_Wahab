@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Blog - Dr Omar Wahab | Actualités et Conseils",
   description: "Articles du Dr Omar Wahab sur la chirurgie esthétique, la médecine esthétique et l'actualité du cabinet à Bruges et Bordeaux.",
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogPage() {

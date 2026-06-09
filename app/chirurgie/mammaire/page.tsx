@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Chirurgie Mammaire - Dr Omar Wahab | Augmentation, Réduction, Lifting",
   description: "Chirurgie mammaire à Bruges et Bordeaux : augmentation par prothèses ou lipofilling, réduction, lifting, reconstruction et malformations. Consultations avec le Dr Omar Wahab.",
   keywords: "chirurgie mammaire, augmentation mammaire, lipofilling, réduction mammaire, lifting mammaire, gynécomastie, reconstruction mammaire, malformations mammaires, bruges, bordeaux",
+  alternates: { canonical: "/chirurgie/mammaire" },
 };
 
 const augmentationProthesesImage = '/Mammaire/close-up-hands-holding-breast-implants_800px.webp';
