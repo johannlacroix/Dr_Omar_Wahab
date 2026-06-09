@@ -46,6 +46,25 @@
 
    URL de preview recette (exemple) : `https://dr-omar-wahab-git-recette-<team>.vercel.app`
 
+   **Important — l’URL `…-git-dev-…` peut rester accessible** : désactiver les déploiements
+   n’efface pas les anciennes previews. L’URL dev affiche le **dernier** déploiement dev déjà
+   publié. Pour ne plus l’utiliser :
+   - ne partagez plus cette URL ; utilisez celle de **recette** ;
+   - optionnel : **Deployments** → filtre `dev` → menu `…` sur chaque déploiement → **Delete**.
+
+   **Ignored Build Step (dashboard Vercel)** — ce n’est pas dans Settings → Git, mais dans :
+   **Settings → Build and Deployment** → section **Ignored Build Step** → **Custom** :
+
+   ```bash
+   if [ "$VERCEL_GIT_COMMIT_REF" = "dev" ]; then exit 0; else exit 1; fi
+   ```
+
+   (exit 0 = build annulé pour `dev` ; exit 1 = build normal pour `recette` et `main`.)
+
+   La même règle est déjà dans `vercel.json` via `ignoreCommand` (prioritaire sur le dashboard).
+
+   Doc Vercel : [Project settings – Ignored Build Step](https://vercel.com/docs/project-configuration/project-settings)
+
 ### Méthode 2 : Via CLI Vercel
 
 ```bash
