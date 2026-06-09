@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { AccessibleModal } from '@/components/AccessibleModal';
 
 interface ReductionMammaireCardProps {
   image: string;
@@ -37,7 +38,7 @@ export function ReductionMammaireCard({ image, imagePosition = 'right' }: Reduct
             <button
               type="button"
               onClick={openModal}
-              className="inline-flex items-center justify-center text-primary/80 hover:text-primary transition-colors"
+              className="inline-flex items-center justify-center text-primary-text hover:text-primary-dark transition-colors"
               aria-label="En savoir plus sur la réduction mammaire"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
@@ -52,30 +53,16 @@ export function ReductionMammaireCard({ image, imagePosition = 'right' }: Reduct
         </div>
       </div>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4" onClick={closeModal}>
-          <div
-            className="relative max-w-3xl w-full bg-white rounded-3xl shadow-xl shadow-neutral-900/15 p-6 md:p-8 max-h-[90vh] overflow-y-auto"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 transition-colors"
-              onClick={closeModal}
-              aria-label="Fermer la fenêtre d'information sur la réduction mammaire"
-            >
-              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}>
-                <path d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <h3 className="text-2xl md:text-3xl font-light text-neutral-800 mb-5 tracking-tight">
-              Réduction mammaire
-            </h3>
-
-            <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
+      <AccessibleModal
+        isOpen={isOpen}
+        onClose={closeModal}
+        title="Réduction mammaire"
+        closeLabel="Fermer la fenêtre d'information sur la réduction mammaire"
+      >
+        <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
               <p>
                 La réduction mammaire vise à diminuer un volume de poitrine jugé trop important, à l&apos;origine
-                de douleurs dorsales ou cervicales, de gêne à l&apos;habilitation ou à la pratique sportive, et
+                de douleurs dorsales ou cervicales, de gêne à l&apos;habillement ou à la pratique sportive, et
                 parfois d&apos;inconfort dans le regard de l&apos;autre. Elle permet d&apos;obtenir des seins plus
                 légers, mieux positionnés et en harmonie avec la silhouette.
               </p>
@@ -129,9 +116,7 @@ export function ReductionMammaireCard({ image, imagePosition = 'right' }: Reduct
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+      </AccessibleModal>
     </>
   );
 }

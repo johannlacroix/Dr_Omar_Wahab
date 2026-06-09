@@ -9,8 +9,8 @@ import { OtoplastieCard } from '@/components/OtoplastieCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie du Visage - Dr Omar Wahab | Rhinoplastie, Blépharoplastie, Lifting",
-  description: "Chirurgie esthétique du visage à Bruges : rhinoplastie, blépharoplastie, lifting facial. Consultations avec le Dr Omar Wahab.",
-  keywords: "chirurgie visage, rhinoplastie, blépharoplastie, lifting visage, bruges",
+  description: "Chirurgie esthétique du visage à Bruges et Bordeaux : rhinoplastie, blépharoplastie, lifting facial. Consultations avec le Dr Omar Wahab.",
+  keywords: "chirurgie visage, rhinoplastie, blépharoplastie, lifting visage, bruges, bordeaux",
 };
 
 export default function VisagePage() {
@@ -53,7 +53,7 @@ export default function VisagePage() {
         <div className="absolute inset-0">
           <Image
             src="/Visage/pexels-gustavo-fring-3985310_opti_800px.webp"
-            alt="Chirurgie du Visage"
+            alt="Chirurgie du visage — rhinoplastie et lifting facial, Dr Omar Wahab"
             fill
             className="object-cover"
             priority

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { AccessibleModal } from '@/components/AccessibleModal';
 
 interface BlepharoplastieCardProps {
   image: string;
@@ -24,7 +25,7 @@ export function BlepharoplastieCard({ image }: BlepharoplastieCardProps) {
             <button
               type="button"
               onClick={openModal}
-              className="inline-flex items-center justify-center text-primary/80 hover:text-primary transition-colors"
+              className="inline-flex items-center justify-center text-primary-text hover:text-primary-dark transition-colors"
               aria-label="En savoir plus sur la blépharoplastie"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}>
@@ -41,14 +42,13 @@ export function BlepharoplastieCard({ image }: BlepharoplastieCardProps) {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4" onClick={closeModal}>
-          <div className="relative max-w-3xl w-full bg-white rounded-3xl shadow-xl shadow-neutral-900/15 p-6 md:p-8 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <button type="button" className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 transition-colors" onClick={closeModal} aria-label="Fermer">
-              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}><path d="M6 18L18 6M6 6l12 12" /></svg>
-            </button>
-            <h3 className="text-2xl md:text-3xl font-light text-neutral-800 mb-5 tracking-tight">Blépharoplastie</h3>
-            <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
+      <AccessibleModal
+        isOpen={isOpen}
+        onClose={closeModal}
+        title="Blépharoplastie"
+        closeLabel="Fermer"
+      >
+        <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
               <p>La blépharoplastie est la chirurgie des paupières supérieures et inférieures. Elle corrige les paupières tombantes et les poches sous les yeux. Le Dr Wahab, chirurgien esthétique à Bruges, réalise une approche sur mesure. Le regard est rajeuni et reposé. L’intervention est rapide et précise, les cicatrices quasi invisibles.</p>
               <div>
                 <h4 className="text-base md:text-lg font-normal text-neutral-800 mb-2">Suites opératoires</h4>
@@ -69,9 +69,7 @@ export function BlepharoplastieCard({ image }: BlepharoplastieCardProps) {
                 <p>Une blépharoplastie supérieure peut parfois être prise en charge par la Sécurité sociale quand l’excédent cutané entraîne une diminution du champ visuel (confirmé par un examen ophtalmologique).</p>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+      </AccessibleModal>
     </>
   );
 }

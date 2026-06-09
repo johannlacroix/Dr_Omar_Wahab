@@ -9,8 +9,8 @@ import { BodyLiftCard } from '@/components/BodyLiftCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie de la Silhouette - Dr Omar Wahab | Lipoaspiration, Abdominoplastie",
-  description: "Chirurgie de la silhouette à Bruges : lipoaspiration, abdominoplastie, lifting des bras et cuisses. Consultations avec le Dr Omar Wahab.",
-  keywords: "chirurgie silhouette, lipoaspiration, abdominoplastie, lifting bras, bruges",
+  description: "Chirurgie de la silhouette à Bruges et Bordeaux : lipoaspiration, abdominoplastie, lifting des bras et cuisses. Consultations avec le Dr Omar Wahab.",
+  keywords: "chirurgie silhouette, lipoaspiration, abdominoplastie, lifting bras, bruges, bordeaux",
 };
 
 export default function SilhouettePage() {
@@ -60,7 +60,7 @@ export default function SilhouettePage() {
         <div className="absolute inset-0">
           <Image
             src="/Silouhette/pexels-pixabay-206369_opti_800px.webp"
-            alt="Chirurgie de la Silhouette"
+            alt="Chirurgie de la silhouette — lipoaspiration et remodelage corporel"
             fill
             className="object-cover"
             priority

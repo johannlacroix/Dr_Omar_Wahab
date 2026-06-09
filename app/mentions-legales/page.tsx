@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Mentions Légales - Dr Omar Wahab",
-  description: "Mentions légales du site du Dr Omar Wahab, chirurgien esthétique à Bruges.",
+  description: "Mentions légales du site du Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux.",
   robots: {
     index: false,
     follow: false,
@@ -20,7 +20,7 @@ export default function MentionsLegalesPage() {
             <h2 className="text-2xl font-bold mb-4">1. Éditeur du site</h2>
             <p>
               Le site www.dr-omar-wahab.fr est édité par le Dr Omar Wahab,
-              chirurgien esthétique exerçant à Bruges.
+              chirurgien esthétique exerçant à Bruges et Bordeaux.
             </p>
           </section>
 
@@ -68,8 +68,13 @@ export default function MentionsLegalesPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">7. Cookies</h2>
             <p>
-              Ce site utilise des cookies pour améliorer l'expérience utilisateur. 
-              En continuant à naviguer sur ce site, vous acceptez l'utilisation de cookies.
+              Ce site utilise Google Analytics pour mesurer l&apos;audience de manière anonyme, uniquement
+              après votre consentement explicite via la bannière affichée lors de votre première visite.
+              Vous pouvez accepter ou refuser ce suivi à tout moment en effaçant les données de navigation
+              de votre navigateur (cookies et stockage local) puis en rechargeant le site.
+            </p>
+            <p className="mt-4">
+              En l&apos;absence de consentement, aucun cookie de mesure d&apos;audience n&apos;est déposé.
             </p>
           </section>
 

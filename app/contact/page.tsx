@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Contact - Dr Omar Wahab | Prendre rendez-vous",
-  description: "Contactez le Dr Omar Wahab, chirurgien esthétique à Bruges. Prenez rendez-vous en ligne via Doctolib.",
+  description: "Contactez le Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux. Prenez rendez-vous en ligne via Doctolib.",
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="/Cabinet/Plaque_signal_opti_400Ko.webp"
-            alt="Contact"
+            alt="Plaque du cabinet du Dr Omar Wahab à Orthopôle, Bruges"
             fill
             className="object-cover"
             priority
@@ -113,50 +113,67 @@ export default function ContactPage() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-light text-neutral-700 mb-1.5">Nom</label>
+                      <label htmlFor="contact-nom" className="block text-sm font-light text-neutral-700 mb-1.5">
+                        Nom
+                      </label>
                       <input
+                        id="contact-nom"
                         type="text"
                         name="nom"
+                        autoComplete="family-name"
                         required
-                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-light text-neutral-700 mb-1.5">Prénom</label>
+                      <label htmlFor="contact-prenom" className="block text-sm font-light text-neutral-700 mb-1.5">
+                        Prénom
+                      </label>
                       <input
+                        id="contact-prenom"
                         type="text"
                         name="prenom"
+                        autoComplete="given-name"
                         required
-                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-light text-neutral-700 mb-1.5">E-mail</label>
+                      <label htmlFor="contact-email" className="block text-sm font-light text-neutral-700 mb-1.5">
+                        E-mail
+                      </label>
                       <input
+                        id="contact-email"
                         type="email"
                         name="email"
+                        autoComplete="email"
                         required
-                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-light text-neutral-700 mb-1.5">Téléphone</label>
+                      <label htmlFor="contact-telephone" className="block text-sm font-light text-neutral-700 mb-1.5">
+                        Téléphone
+                      </label>
                       <input
+                        id="contact-telephone"
                         type="tel"
                         name="telephone"
-                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                        autoComplete="tel"
+                        className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-light text-neutral-700 mb-1.5">
+                    <label htmlFor="contact-intervention" className="block text-sm font-light text-neutral-700 mb-1.5">
                       Type d&apos;intervention (indicatif)
                     </label>
                     <select
+                      id="contact-intervention"
                       name="type_intervention"
-                      className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                      className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"
                     >
                       <option>Chirurgie mammaire</option>
                       <option>Chirurgie de la silhouette</option>
@@ -168,19 +185,28 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-light text-neutral-700 mb-1.5">Votre message</label>
+                    <label htmlFor="contact-message" className="block text-sm font-light text-neutral-700 mb-1.5">
+                      Votre message
+                    </label>
                     <textarea
+                      id="contact-message"
                       name="message"
                       rows={4}
                       required
-                      className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+                      className="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"
                     />
                   </div>
-                  {/* Champ caché anti-spam (honeypot) */}
-                  <input type="text" name="_gotcha" style={{ display: 'none' }} />
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute opacity-0 pointer-events-none h-0 w-0"
+                  />
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center rounded-full border border-primary px-6 py-2.5 text-sm font-light text-primary hover:bg-primary hover:text-white transition-colors"
+                    className="inline-flex items-center justify-center rounded-full border border-primary px-6 py-2.5 text-sm font-light text-primary-dark hover:bg-primary hover:text-white transition-colors"
                   >
                     Envoyer le message
                   </button>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const ORTHOPOLE_IMAGES = [
   '/Cabinet/Couloir_cabinetCLEO_1920px.webp',
@@ -14,6 +14,7 @@ const ORTHOPOLE_IMAGES = [
 export function OrthopoleGallerySection() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(2);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const previousImage = () => {
     setCurrentIndex((prev) => (prev === 0 ? ORTHOPOLE_IMAGES.length - 1 : prev - 1));
@@ -26,6 +27,10 @@ export function OrthopoleGallerySection() {
   useEffect(() => {
     if (!isOpen) return;
 
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
@@ -37,7 +42,10 @@ export function OrthopoleGallerySection() {
     };
 
     window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, [isOpen]);
 
   return (
@@ -74,7 +82,7 @@ export function OrthopoleGallerySection() {
               href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-61570"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary-text hover:bg-primary hover:text-white transition-colors"
             >
               Je prends rendez-vous à Orthopôle
             </Link>
@@ -95,6 +103,7 @@ export function OrthopoleGallerySection() {
             onClick={(event) => event.stopPropagation()}
           >
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={() => setIsOpen(false)}
               className="absolute top-3 right-3 z-20 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"

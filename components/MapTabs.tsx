@@ -30,11 +30,19 @@ export function MapTabs() {
         Localisation du cabinet
       </h2>
 
-      <div className="inline-flex mb-4 rounded-full border border-neutral-200 bg-neutral-50 p-1 text-xs md:text-sm">
+      <div
+        role="tablist"
+        aria-label="Lieux de consultation"
+        className="inline-flex mb-4 rounded-full border border-neutral-200 bg-neutral-50 p-1 text-xs md:text-sm"
+      >
         {TABS.map((tab) => (
           <button
             key={tab.key}
             type="button"
+            role="tab"
+            id={`map-tab-${tab.key}`}
+            aria-selected={tab.key === active}
+            aria-controls={`map-panel-${tab.key}`}
             onClick={() => setActive(tab.key)}
             className={`px-3 md:px-4 py-1.5 rounded-full transition-colors ${
               tab.key === active
@@ -47,29 +55,34 @@ export function MapTabs() {
         ))}
       </div>
 
-      <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">{current.description}</p>
+      <div
+        role="tabpanel"
+        id={`map-panel-${active}`}
+        aria-labelledby={`map-tab-${active}`}
+      >
+        <p className="text-neutral-600 mb-4 font-light leading-relaxed text-sm">{current.description}</p>
 
-      <div className="flex-1 rounded-2xl overflow-hidden border border-neutral-200 bg-background-soft mb-4">
-        <iframe
-          title={current.label}
-          src={current.iframeSrc}
-          className="w-full h-64 md:h-72 border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+        <div className="flex-1 rounded-2xl overflow-hidden border border-neutral-200 bg-background-soft mb-4">
+          <iframe
+            title={current.label}
+            src={current.iframeSrc}
+            className="w-full h-64 md:h-72 border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
 
-      <div className="flex flex-wrap gap-3">
-        <a
-          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(current.label)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
-        >
-          Ouvrir dans Google Maps
-        </a>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(current.label)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary-dark hover:bg-primary hover:text-white transition-colors"
+          >
+            Ouvrir dans Google Maps
+          </a>
+        </div>
       </div>
     </div>
   );
 }
-

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { AccessibleModal } from '@/components/AccessibleModal';
 
 export function ReferencesCard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export function ReferencesCard() {
           <button
             type="button"
             onClick={openModal}
-            className="inline-flex items-center justify-center rounded-full border border-primary px-5 py-2 text-sm font-light text-primary hover:bg-primary hover:text-white transition-colors"
+            className="inline-flex items-center justify-center rounded-full border border-primary px-5 py-2 text-sm font-light text-primary-text hover:bg-primary hover:text-white transition-colors"
           >
             Voir le parcours complet
             <svg
@@ -45,36 +46,13 @@ export function ReferencesCard() {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4" onClick={closeModal}>
-          <div
-            className="relative max-w-3xl w-full bg-white rounded-3xl shadow-xl shadow-neutral-900/15 p-6 md:p-8 max-h-[90vh] overflow-y-auto"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 transition-colors"
-              onClick={closeModal}
-              aria-label="Fermer la fenêtre « Parcours & références »"
-            >
-              <svg
-                className="w-6 h-6 md:w-7 md:h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <h3 className="text-2xl md:text-3xl font-light text-neutral-800 mb-5 tracking-tight">
-              Le Dr Wahab en quelques références
-            </h3>
-
-            <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
+      <AccessibleModal
+        isOpen={isOpen}
+        onClose={closeModal}
+        title="Le Dr Wahab en quelques références"
+        closeLabel="Fermer la fenêtre « Parcours & références »"
+      >
+        <div className="space-y-5 text-xs md:text-sm text-neutral-700 font-light leading-snug">
               <div>
                 <h4 className="text-base md:text-lg font-normal text-neutral-800 mb-2">Activité actuelle</h4>
                 <div className="space-y-2">
@@ -142,9 +120,7 @@ export function ReferencesCard() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+      </AccessibleModal>
     </>
   );
 }

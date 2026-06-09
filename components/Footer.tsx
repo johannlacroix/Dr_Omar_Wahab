@@ -71,7 +71,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.google.com/search?sca_esv=b0109be66d9778c1&sxsrf=ANbL-n59Xg4zgZilsGzyVifWpmSrX2oANQ:1773322246305&q=dr+wahab&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcaH2UvvokEDX8PBwgZjzbqOK5GrBde-oCbpiEbJOFjAx7TB_CFpC1JQta0OhcrPdL6kpcY%3D&uds=ALYpb_kiiUNHkONghgvqB_3sKPHuGxhmG5VPqDGcgAdxlg5rMgxHFTXsahyHeDWuC9wElkm1wnfD06AW4SxD1isrFUHAoX9yCCPSLWztAbkKUXyDllStsnc&sa=X&ved=2ahUKEwixt8CUvJqTAxUIdqQEHeriGzcQ3PALegQIFxAE&biw=1970&bih=897&dpr=0.97"
+                  href="https://www.google.com/maps/search/?api=1&query=Dr+Omar+Wahab+chirurgien+Bruges"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block"
@@ -102,7 +102,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-200 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block"
                 >
-                  A Bruges
+                  À Bruges
                 </Link>
               </li>
               <li>
@@ -112,7 +112,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-200 hover:text-primary transition-colors font-light rounded-lg hover:bg-neutral-800/50 px-2 py-1 inline-block"
                 >
-                  A Bordeaux
+                  À Bordeaux
                 </Link>
               </li>
             </ul>

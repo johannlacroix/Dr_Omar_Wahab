@@ -3,7 +3,7 @@ import { getAllBlogPosts } from '@/lib/blog';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://dr-omar-wahab.vercel.app';
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.dr-omar-wahab.fr';
 
   const posts = await getAllBlogPosts();
   const blogPosts: MetadataRoute.Sitemap = posts.map((post) => ({

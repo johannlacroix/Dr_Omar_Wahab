@@ -6,7 +6,7 @@ import { NymphoplastieCard } from '@/components/NymphoplastieCard';
 export const metadata: Metadata = {
   title: 'Chirurgie Intime - Dr Omar Wahab | Femme',
   description:
-    'Chirurgie intime féminine à Bruges : prise en charge discrète et personnalisée. Consultations avec le Dr Omar Wahab.',
+    'Chirurgie intime féminine à Bruges et Bordeaux : prise en charge discrète et personnalisée. Consultations avec le Dr Omar Wahab.',
 };
 
 export default function ChirurgieIntimePage() {
@@ -29,7 +29,7 @@ export default function ChirurgieIntimePage() {
         <div className="absolute inset-0">
           <Image
             src="/Intime/pexels-pixabay-414362_opti_800px.webp"
-            alt="Chirurgie intime"
+            alt="Chirurgie intime féminine — consultation confidentielle"
             fill
             className="object-cover"
             priority

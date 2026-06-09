@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const CLEO_IMAGES = [
   '/CLEO/CLEO_1_1920px.webp',
@@ -27,6 +27,7 @@ const CLEO_IMAGES = [
 export function CleoGallerySection() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(6);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const previousImage = () => {
     setCurrentIndex((prev) => (prev === 0 ? CLEO_IMAGES.length - 1 : prev - 1));
@@ -39,6 +40,10 @@ export function CleoGallerySection() {
   useEffect(() => {
     if (!isOpen) return;
 
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
@@ -50,7 +55,10 @@ export function CleoGallerySection() {
     };
 
     window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, [isOpen]);
 
   return (
@@ -88,7 +96,7 @@ export function CleoGallerySection() {
               href="https://www.doctolib.fr/chirurgien-plastique/bruges/omar-wahab?pid=practice-765036"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary hover:bg-primary hover:text-white transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-1.5 text-xs font-light text-primary-text hover:bg-primary hover:text-white transition-colors"
             >
               Je prends rendez-vous à CLEO
             </Link>
@@ -109,6 +117,7 @@ export function CleoGallerySection() {
             onClick={(event) => event.stopPropagation()}
           >
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={() => setIsOpen(false)}
               className="absolute top-3 right-3 z-20 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"

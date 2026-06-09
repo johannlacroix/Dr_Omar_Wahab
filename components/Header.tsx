@@ -35,16 +35,16 @@ export function Header() {
             className="flex items-center space-x-3 group"
           >
             <div className="flex flex-col">
-              <h1 className="text-2xl lg:text-3xl font-light text-neutral-800 tracking-tight group-hover:text-primary transition-colors">
+              <p className="text-2xl lg:text-3xl font-light text-neutral-800 tracking-tight group-hover:text-primary transition-colors">
                 Dr Omar Wahab
-              </h1>
+              </p>
               <span className="text-xs lg:text-sm text-neutral-600 font-light tracking-wider uppercase">
                 Chirurgien Esthétique
               </span>
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8" aria-label="Navigation principale">
             <Link 
               href="/" 
               className="text-neutral-600 hover:text-primary transition-colors font-light text-sm tracking-wide relative group"
@@ -77,9 +77,12 @@ export function Header() {
           </nav>
 
           <button
-            className="lg:hidden p-2 text-neutral-600 hover:text-primary transition-colors rounded-lg"
+            type="button"
+            className="lg:hidden p-2 text-neutral-600 hover:text-primary-dark transition-colors rounded-lg"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-main-menu"
+            aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           >
             <svg
               className="w-6 h-6"
@@ -107,8 +110,8 @@ export function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-neutral-200 animate-fade-in rounded-b-2xl">
-            <nav className="flex flex-col space-y-4">
+          <div id="mobile-main-menu" className="lg:hidden py-6 border-t border-neutral-200 animate-fade-in rounded-b-2xl">
+            <nav className="flex flex-col space-y-4" aria-label="Menu principal">
               <Link
                 href="/"
                 className="text-neutral-600 hover:text-primary transition-colors font-light text-sm tracking-wide py-2 rounded-lg hover:bg-neutral-50 px-2"

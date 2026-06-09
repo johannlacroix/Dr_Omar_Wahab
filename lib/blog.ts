@@ -52,7 +52,9 @@ function formatCategory(category?: string): string | undefined {
 // Générer l'URL d'image selon le format
 function getImageUrl(mainImage: any, format?: string): string | undefined {
   if (!mainImage?.asset) {
-    console.log('[Blog] getImageUrl: No mainImage.asset found', { mainImage });
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Blog] getImageUrl: No mainImage.asset found', { mainImage });
+    }
     return undefined;
   }
 
@@ -77,7 +79,9 @@ function getImageUrl(mainImage: any, format?: string): string | undefined {
         break;
     }
     
-    console.log('[Blog] Generated image URL:', imageUrl);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Blog] Generated image URL:', imageUrl);
+    }
     return imageUrl;
   } catch (error) {
     console.error('[Blog] Error generating image URL:', error);
@@ -130,17 +134,21 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
   try {
     const posts: SanityPost[] = await sanityClient.fetch(query);
-    console.log(`[Blog] Fetched ${posts.length} posts from Sanity`);
-    if (posts.length === 0) {
-      console.warn('[Blog] No posts found. Check if posts are published in Sanity.');
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[Blog] Fetched ${posts.length} posts from Sanity`);
+      if (posts.length === 0) {
+        console.warn('[Blog] No posts found. Check if posts are published in Sanity.');
+      }
     }
     return posts.map(convertSanityPostToBlogPost);
   } catch (error) {
     console.error('[Blog] Error fetching blog posts from Sanity:', error);
-    console.error('[Blog] Sanity config:', {
-      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'rg0stah3',
-      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-    });
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[Blog] Sanity config:', {
+        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'rg0stah3',
+        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+      });
+    }
     return [];
   }
 }

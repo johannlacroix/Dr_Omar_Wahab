@@ -6,7 +6,7 @@ import { CabinetCarousel } from '@/components/CabinetCarousel';
 
 export const metadata: Metadata = {
   title: "À propos - Dr Omar Wahab | Chirurgien Esthétique",
-  description: "Découvrez le parcours et l'expertise du Dr Omar Wahab, chirurgien esthétique à Bruges.",
+  description: "Découvrez le parcours et l'expertise du Dr Omar Wahab, chirurgien esthétique à Bruges et Bordeaux.",
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
-                <h1 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight" style={{ fontWeight: 300 }}>
+                <h1 className="text-4xl md:text-5xl font-light text-neutral-800 mb-4 tracking-tight">
                   Dr Omar Wahab
                 </h1>
                 <p className="text-neutral-600 text-sm font-light leading-relaxed" style={{ fontWeight: 300 }}>
@@ -147,7 +147,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="order-2 md:order-1">
                 <h3 className="text-xl md:text-2xl font-light text-neutral-800 mb-4 tracking-tight">
-                  Mon approche
+                  L&apos;approche du Dr Wahab
                 </h3>
                 <p className="text-neutral-600 font-light leading-relaxed text-sm">
                   Avant tout geste, le Dr Wahab accorde un temps important à l’écoute et à l’information afin
@@ -166,7 +166,7 @@ export default function AboutPage() {
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
                 <Image
                   src="/Silouhette/wayhomestudio_sideways-shot-slim-woman-wears-cropped-top-panties-demonstrates-perfect-figure-after-weigh-loss-poses-against-beige-studio-wall_opti_800px.webp"
-                  alt="Mon approche en chirurgie esthétique"
+                  alt="L'approche du Dr Wahab en chirurgie esthétique"
                   fill
                   className="object-cover"
                 />

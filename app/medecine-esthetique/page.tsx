@@ -7,8 +7,8 @@ import { AntiAgeCard } from '@/components/AntiAgeCard';
 
 export const metadata: Metadata = {
   title: "Médecine Esthétique - Dr Omar Wahab | Botox, Acide Hyaluronique",
-  description: "Médecine esthétique à Bruges : injections de Botox, acide hyaluronique, traitements non invasifs. Consultations avec le Dr Omar Wahab.",
-  keywords: "médecine esthétique, botox, acide hyaluronique, injections, bruges",
+  description: "Médecine esthétique à Bruges et Bordeaux : injections de Botox, acide hyaluronique, traitements non invasifs. Consultations avec le Dr Omar Wahab.",
+  keywords: "médecine esthétique, botox, acide hyaluronique, injections, bruges, bordeaux",
 };
 
 export default function MedecineEsthetiquePage() {
@@ -39,7 +39,7 @@ export default function MedecineEsthetiquePage() {
         <div className="absolute inset-0">
           <Image
             src="/Visage/pexels-shiny-diamond-3762408_opti_800px.webp"
-            alt="Médecine Esthétique"
+            alt="Médecine esthétique — injections Botox et acide hyaluronique"
             fill
             className="object-cover"
             priority

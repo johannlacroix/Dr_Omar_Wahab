@@ -5,7 +5,7 @@ import { DoctolibButton } from '@/components/DoctolibButton';
 export const metadata: Metadata = {
   title: 'Chirurgie Dermatologique - Dr Omar Wahab | Lésions cutanées, nævus, tumeurs bénignes',
   description:
-    'Chirurgie dermatologique à Bruges : exérèse de lésions cutanées, nævus, tumeurs bénignes et cicatrices. Consultations avec le Dr Omar Wahab.',
+    'Chirurgie dermatologique à Bruges et Bordeaux : exérèse de lésions cutanées, nævus, tumeurs bénignes et cicatrices. Consultations avec le Dr Omar Wahab.',
 };
 
 export default function ChirurgieDermatologiquePage() {
@@ -33,7 +33,7 @@ export default function ChirurgieDermatologiquePage() {
         <div className="absolute inset-0">
           <Image
             src="/Dermato/freepik_young-woman-getting-beauty-procedure-wellness-center_opti_800px.webp"
-            alt="Chirurgie dermatologique"
+            alt="Chirurgie dermatologique — exérèse de lésions cutanées et nævus"
             fill
             className="object-cover"
             priority

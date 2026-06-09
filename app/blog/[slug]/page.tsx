@@ -32,6 +32,28 @@ export async function generateMetadata({
   return {
     title: `${post.title} - Blog Dr Omar Wahab`,
     description: post.excerpt,
+    openGraph: {
+      title: `${post.title} - Blog Dr Omar Wahab`,
+      description: post.excerpt,
+      type: 'article',
+      locale: 'fr_FR',
+      ...(post.image
+        ? {
+            images: [
+              {
+                url: post.image,
+                alt: post.title,
+              },
+            ],
+          }
+        : {}),
+    },
+    twitter: {
+      card: post.image ? 'summary_large_image' : 'summary',
+      title: `${post.title} - Blog Dr Omar Wahab`,
+      description: post.excerpt,
+      ...(post.image ? { images: [post.image] } : {}),
+    },
   };
 }
 

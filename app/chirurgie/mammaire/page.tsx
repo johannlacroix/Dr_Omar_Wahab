@@ -10,8 +10,8 @@ import { MamelonsInvaginesCard } from '@/components/MamelonsInvaginesCard';
 
 export const metadata: Metadata = {
   title: "Chirurgie Mammaire - Dr Omar Wahab | Augmentation, Réduction, Lifting",
-  description: "Chirurgie mammaire à Bruges : augmentation mammaire, réduction mammaire, lifting mammaire. Consultations avec le Dr Omar Wahab.",
-  keywords: "chirurgie mammaire, augmentation mammaire, réduction mammaire, lifting mammaire, bruges",
+  description: "Chirurgie mammaire à Bruges et Bordeaux : augmentation par prothèses ou lipofilling, réduction, lifting, reconstruction et malformations. Consultations avec le Dr Omar Wahab.",
+  keywords: "chirurgie mammaire, augmentation mammaire, lipofilling, réduction mammaire, lifting mammaire, gynécomastie, reconstruction mammaire, malformations mammaires, bruges, bordeaux",
 };
 
 const augmentationProthesesImage = '/Mammaire/close-up-hands-holding-breast-implants_800px.webp';
@@ -46,7 +46,7 @@ export default function MammairePage() {
       position: 'right' as const,
     },
     {
-      title: 'Reconstruction mammaire',
+      title: 'Reconstruction & malformations mammaires',
       description:
         'Prise en charge des malformations mammaires congénitales et des asymétries mammaires importantes.',
       image: '/Mammaire/pexels-vtnt2-21045058_opti_800px.webp',
@@ -68,7 +68,7 @@ export default function MammairePage() {
         <div className="absolute inset-0">
           <Image
             src="/Mammaire/pexels-79380313-9112046_opti_800px.webp"
-            alt="Chirurgie Mammaire"
+            alt="Chirurgie mammaire — consultation avec le Dr Omar Wahab à Bruges et Bordeaux"
             fill
             className="object-cover"
             style={{ objectPosition: 'center 30%' }}
@@ -143,7 +143,7 @@ export default function MammairePage() {
                   image={intervention.image}
                   imagePosition={imagePosition}
                 />
-              ) : intervention.title === 'Reconstruction mammaire' ? (
+              ) : intervention.title === 'Reconstruction & malformations mammaires' ? (
                 <ReconstructionMammaireCard
                   key={index}
                   image={intervention.image}

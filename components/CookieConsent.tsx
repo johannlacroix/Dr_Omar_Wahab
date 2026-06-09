@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 type ConsentState = 'unknown' | 'accepted' | 'rejected';
@@ -42,7 +43,10 @@ export function CookieConsent() {
           <p>
             Ce site utilise Google Analytics pour mesurer l&apos;audience de manière anonyme. Vous pouvez accepter ou
             refuser ce suivi. En l&apos;absence de consentement, aucun cookie de mesure d&apos;audience n&apos;est
-            déposé.
+            déposé.{' '}
+            <Link href="/mentions-legales" className="underline underline-offset-2 hover:text-primary-light">
+              En savoir plus
+            </Link>
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2 md:gap-3 shrink-0">
